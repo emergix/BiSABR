@@ -1,0 +1,4233 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[    169358,       3894]*)
+(*NotebookOutlinePosition[    170182,       3921]*)
+(*  CellTagsIndexPosition[    170138,       3917]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(BiSABR\ \ \ SPREADOPTION\)], "Input",
+  TextAlignment->Center,
+  FontSize->36],
+
+Cell[BoxData[{
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          StyleBox[\(dF\_1\)], 
+          StyleBox["="], 
+          RowBox[{\(\[Alpha]\_1\), 
+            StyleBox[" "], 
+            RowBox[{
+              StyleBox[\(C\_1\)], 
+              StyleBox["["], \(F\_1\), 
+              StyleBox["]"]}], 
+            StyleBox[" "], 
+            StyleBox[\(dW\_1\)]}]}], 
+        StyleBox[";"]}], 
+      StyleBox["\[IndentingNewLine]"]}], "\[IndentingNewLine]", 
+    StyleBox[\(d\[Alpha]\_1 = \ \(\[Nu]\_1\) \[Alpha]\_1\ dW\_\(\(v1\)\(\
+\[IndentingNewLine]\)
+              \);\)], "\[IndentingNewLine]", 
+    StyleBox[\(\(dW\_1\) dW\_v1 = \(\(\(\[Rho]\)\(\ \)\)\_1\) 
+            dt;\)]}], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[{
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          StyleBox[\(dF\_2\)], 
+          StyleBox["="], 
+          RowBox[{\(\[Alpha]\_2\), 
+            StyleBox[" "], 
+            RowBox[{
+              StyleBox[\(C\_2\)], 
+              StyleBox["["], \(F\_2\), 
+              StyleBox["]"]}], 
+            StyleBox[" "], 
+            StyleBox[\(dW\_2\)]}]}], 
+        StyleBox[";"]}], 
+      StyleBox["\[IndentingNewLine]"]}], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        StyleBox[\(d\[Alpha]\_2\)], "=", " ", 
+        StyleBox[\(\(\[Nu]\_2\) \[Alpha]\_2\ \
+dW\_\(\(v2\)\(\[IndentingNewLine]\)
+              \)\)]}], 
+      StyleBox[";"]}], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\(dW\_2\) dW\_v2\)], 
+        StyleBox["="], 
+        RowBox[{\(\[Rho]\_2\), 
+          StyleBox[" "], 
+          StyleBox["dt"]}]}], 
+      StyleBox[";"]}]}], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[
+    \(plus\ the\ links\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\(dW\_1\) dW\_2\)], 
+        StyleBox["="], 
+        RowBox[{\(\[Rho]\_s\), 
+          StyleBox[" "], 
+          StyleBox["dt"]}]}], 
+      StyleBox[";"], 
+      RowBox[{
+        StyleBox[\(\(dW\_1\) dW\_v2\)], 
+        StyleBox["="], 
+        RowBox[{\(\[Rho]\_c12\), 
+          StyleBox[" "], 
+          StyleBox["dt"]}]}], 
+      StyleBox[";"], 
+      RowBox[{
+        StyleBox[\(\(dW\_2\) dW\_v1\)], 
+        StyleBox["="], 
+        RowBox[{\(\[Rho]\_c21\), 
+          StyleBox[" "], 
+          StyleBox["dt"]}]}], 
+      StyleBox[";"], 
+      RowBox[{
+        StyleBox[\(\(dW\_v1\) dW\_v2\)], 
+        StyleBox["="], 
+        RowBox[{\(\[Rho]\_v\), 
+          StyleBox[" "], 
+          StyleBox["dt"]}]}], 
+      StyleBox[";"]}]], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[
+    \(the\ pricing\ equation\ \(\(is\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[PartialD]\_t H\) == 
+      1\/2\ \[Epsilon]\^2\ \[Alpha]\_1\^2\ \(C\_1[
+                f\_1]\^2\) \[PartialD]\^2 H\/\[PartialD]f\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                f\_2]\^2\) \[PartialD]\^2 H\/\[PartialD]f\_2\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \[PartialD]\^2 H\/\
+\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Nu]\_2[\[Alpha]\_2] \[PartialD]\^2 H\/\
+\[PartialD]\[Alpha]\_2\^2 + \[InvisibleSpace]\[Epsilon]\^2\ \[Rho]\_1\ \(\(\(\
+\[Alpha]\)\(\ \)\)\_1\) \(\[Nu]\_1\) \[Alpha]\_1\ C\_1[
+            f\_1] \[PartialD]\^2 H\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \
+\(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            f\_2] \[PartialD]\^2 H\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \[Rho]\_c12\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+            f\_1] \[PartialD]\^2 H\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \
+\(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            f\_2] \[PartialD]\^2 H\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+            F\_1] \[Alpha]\_2\ C\_2[
+            F\_2] \[PartialD]\^2 H\/\(\[PartialD]f\_1 \[PartialD]f\_2\) + \(\
+\[Epsilon]\^2\) \(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\
+\[Alpha]\_2\) \[PartialD]\^2 H\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\)\)], "Input"],
+
+Cell[BoxData[
+    \(with\ the\ boundary\ condition\)], "Input"],
+
+Cell[BoxData[
+    \(H[0] = max[f\_1 - f\_2 - K, 0]\)], "Input"],
+
+Cell[BoxData[
+    \(the\ probability\ density\ \ is\ defined\ \(\(by\)\(\ \)\(:\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(prob {F\_1 < f\_1[T] < F\_1 + dF\_1, F\_2 < f\_2[T] < F\_2 + dF\_2, 
+          A\_1 < \(\[Alpha]\_1\) \((T)\) < A\_1 + dA\_1, 
+          A\_2 < \(\[Alpha]\_2\) \((T)\) < A\_2 + dA\_2 | f\_1[t] = f\_1, 
+          f\_2[t] = 
+            f\_2, \[Alpha]\_1[t] = \[Alpha]\_1, \[Alpha]\_2[
+              t] = \[Alpha]\_2} = 
+      p[t, f\_1, \[Alpha]\_1, f\_2, \[Alpha]\_2, T, F\_1, F\_2, A\_1, 
+        A\_2]\)], "Input"],
+
+Cell[BoxData[
+    \(The\ forward\ kolmogoroff\ equation\ of\ this\ density\ \ \(\(is\)\(\ \
+\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(p\_T = 
+      1\/2\ \(\[Epsilon]\^2\) \(\(A\_1\^2\)[\(C\_1[F\_1]\^2\) \
+p]\)\_\(\(F\_1\) F\_1\) + 
+        1\/2\ \(\[Epsilon]\^2\) \(\(A\_2\^2\)[\(C\_2[F\_2]\^2\) \
+p]\)\_\(\(F\_2\) F\_2\) + 
+        1\/2\ \(\[Epsilon]\^2\) \(\(\[Nu]\_1\^2\)[\(A\_1\^2\) \
+p]\)\_\(\(A\_1\) A\_1\) + 
+        1\/2\ \(\[Epsilon]\^2\) \(\(\[Nu]\_2\^2\)[\(A\_2\^2\) \
+p]\)\_\(\(A\_2\) A\_2\) + \(\[Epsilon]\^2\) \[Rho]\_1\ \(\[Nu]\_1[\(A\_1\^2\) \
+C\_1[F\_1] p]\)\_\(\(A\_1\) F\_1\) + \[IndentingNewLine]\(\[Epsilon]\^2\) \
+\[Rho]\_2\ \(\[Nu]\_2[\(A\_2\^2\) C\_2[F\_2] p]\)\_\(\(A\_2\) F\_2\) + \(\
+\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2[C\_1[F\_1] C\_2[F\_2] \
+p]\)\_\(\(F\_1\) F\_2\) + \(\[Epsilon]\^2\) \[Rho]\_v\ \(\[Nu]\_1\) \
+\(\[Nu]\_2[\(A\_1\) \(A\_2\) p]\)\_\(\(A\_1\) A\_2\) + \(\[Epsilon]\^2\) \
+\[Rho]\_c12\ \(A\_1\) \(\[Nu]\_2[C\_1[F\_1] \(A\_2\) p]\)\_\(\(F\_1\) A\_2\) \
++ \(\[Epsilon]\^2\) \[Rho]\_c21\ \(A\_2\) \(\[Nu]\_1[C\_2[F\_2] \(A\_1\) p]\)\
+\_\(\(F\_2\) A\_1\)\)], "Input"],
+
+Cell[BoxData[
+    \(with\ p = \(\[Delta][F\_1 - f\_1] \[Delta][F\_2 - f\_2] \[Delta][
+            A\_1 - \[Alpha]\_1] \[Delta][A\_2 - \[Alpha]\_2]\ \ \ at\ T = 
+        t\)\)], "Input"],
+
+Cell[BoxData[
+    \(let\ V[t, f\_1, 
+        f\_2, \[Alpha]\_1, \[Alpha]\_2]\ be\ the\ value\ ofthe\ spreadoption\ \
+at\ date\ t\ strike\ K\ and\ maturity\ t\_tex\)], "Input"],
+
+Cell[BoxData[
+    \(we\ \(\(have\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(V[t, f\_1, f\_2, \[Alpha]\_1, \[Alpha]\_2] = 
+      E[\(\((F\_1[t\_tex] - F\_2[t\_tex] - K)\)\^+\) | F\_1[t] = f\_1, 
+        F\_2[t] = f\_2, A\_1[t] = \[Alpha]\_1, 
+        A\_2[t] = \[Alpha]\_2]\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_1 \
+\(\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_2 \(\[Integral]\_\(F\_2 + K\)\
+\%\[Infinity]\[DifferentialD]F\_1 \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]F\_2 \((F\_1 - F\_2 - K)\) 
+                      p[t, f\_1, \[Alpha]\_1, f\_2, \[Alpha]\_2, T, F\_1, 
+                        F\_2, A\_1, A\_2]\)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(Change\ of\ \(variable\  : \[IndentingNewLine]\ S\) = 
+        F\_1 - F\_2;\)\), "\[IndentingNewLine]", 
+    \(\t\(B = F\_2;\)\)}], "Input"],
+
+Cell[BoxData[
+    \(\(\(so\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(\[PartialD]H\/\[PartialD]F\_1 = \[PartialD]H\/\[PartialD]S;\)\), "\
+\[IndentingNewLine]", 
+    \(\(\[PartialD]H\/\[PartialD]F\_2 = \[PartialD]H\/\[PartialD]B - \
+\[PartialD]H\/\[PartialD]S;\)\), "\[IndentingNewLine]", 
+    \(\(\[PartialD]\^2 H\/\[PartialD]F\_1\^2 = \[PartialD]\^2 H\/\[PartialD]S\
+\^2;\)\), "\[IndentingNewLine]", 
+    \(\(\[PartialD]\^2 H\/\(\[PartialD]F\_1 \[PartialD]F\_2\) = \
+\[PartialD]\^2 H\/\(\[PartialD]B \[PartialD]S\) - \[PartialD]\^2 H\/\
+\[PartialD]S\^2;\)\), "\[IndentingNewLine]", 
+    \(\[PartialD]\^2 H\/\[PartialD]F\_2\^2 = \[PartialD]\^2 \
+H\/\[PartialD]B\^2 - 
+        2 \[PartialD]\^2 H\/\(\[PartialD]B \[PartialD]S\) + \[PartialD]\^2 \
+H\/\[PartialD]S\^2\)}], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(so\ the\ Kolmogoroff\ forward\ equation\ \(\(rewrites\)\(:\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(p\_T = 
+      1\/2\ \(\[Epsilon]\^2\) \(\(A\_1\^2\)[\(C\_1[S + B]\^2\) p]\)\_SS + 
+        1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) \((\([\(C\_2[B]\^2\) p]\)\_BB - \
+\(2[\(C\_2[B]\^2\) p]\)\_BS + \(2[\(C\_2[B]\^2\) p]\)\_SS)\) + 
+        1\/2\ \(\[Epsilon]\^2\) \(\(\[Nu]\_1\^2\)[\(A\_1\^2\) \
+p]\)\_\(\(A\_1\) A\_1\) + 
+        1\/2\ \(\[Epsilon]\^2\) \(\(\[Nu]\_2\^2\)[\(A\_2\^2\) \
+p]\)\_\(\(A\_2\) A\_2\) + \(\[Epsilon]\^2\) \[Rho]\_1\ \(\[Nu]\_1[\(A\_1\^2\) \
+C\_1[S + B] p]\)\_\(\(A\_1\) S\) + \[IndentingNewLine]\(\[Epsilon]\^2\) \
+\[Rho]\_2\ \(\[Nu]\_2\) \((\([\(A\_2\^2\) C\_2[B] p]\)\_\(\(A\_2\) B\) - \
+\([\(A\_2\^2\) C\_2[B] p]\)\_\(\(A\_2\) S\))\) + \(\[Epsilon]\^2\) \[Rho]\_s\ \
+\(A\_1\) \(A\_2\) \((\([C\_1[S + B] C\_2[B] p]\)\_SB - \([C\_1[S + B] C\_2[B] \
+p]\)\_SS)\) + \(\[Epsilon]\^2\) \[Rho]\_v\ \(\[Nu]\_1\) \(\[Nu]\_2[\(A\_1\) \
+\(A\_2\) p]\)\_\(\(A\_1\) A\_2\) + \(\[Epsilon]\^2\) \[Rho]\_c12\ \(A\_1\) \(\
+\[Nu]\_2[C\_1[S + B] \(A\_2\) p]\)\_\(SA\_2\) + \(\[Epsilon]\^2\) \[Rho]\_c21\
+\ \(A\_2\) \(\[Nu]\_1[C\_2[B] \(A\_1\) p]\)\_\(BA\_1\)\)], "Input"],
+
+Cell[BoxData[
+    \(and\ we\ \(\(have\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(V[t, f\_1, 
+        f\_2, \[Alpha]\_1, \[Alpha]\_2] = \[Integral]\_0\%\[Infinity]\
+\[DifferentialD]A\_1 \(\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_2 \(\
+\[Integral]\_K\%\[Infinity]\[DifferentialD]S \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]B \((S - K)\) 
+                      p[t, f\_1, \[Alpha]\_1, f\_2, \[Alpha]\_2, T, S + B, B, 
+                        A\_1, A\_2]\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(so\ by\ replacing\ and\ taking\ into\ account\ the\ integration\ over\ \
+A\ variables\ giving\ 0\ \(\(results\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]T \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_1 \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]A\_2 \(\[Integral]\_K\%\[Infinity]\[DifferentialD]S \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]B \(\((S - 
+                                    K)\)\^+\) {1\/2\ \(\[Epsilon]\^2\) \
+\(\(A\_1\^2\)[\(C\_1[S + B]\^2\) p]\)\_SS + 
+                                1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) \((\([\(C\
+\_2[B]\^2\) p]\)\_BB - \(2[\(C\_2[B]\^2\) p]\)\_BS + \([\(C\_2[B]\^2\) \
+p]\)\_SS)\) + \[IndentingNewLine]\(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\
+\) \((\([C\_1[S + B] C\_2[B] p]\)\_SB - \([C\_1[S + B] C\_2[B] p]\)\_SS)\)}\)\
+\)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(by\ \(\(regrouping\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]T \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_1 \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]A\_2 \(\[Integral]\_K\%\[Infinity]\[DifferentialD]S \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]B \(\((S - 
+                                    K)\)\^+\) {\([\((1\/2\ \(\[Epsilon]\^2\) \
+\(A\_1\^2\) C\_1[S + B]\^2 + 1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) C\_2[B]\^2 - \
+\(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\) C\_1[S + B] C\_2[B])\) \
+p]\)\_SS + \[IndentingNewLine]1\/2\ \(\[Epsilon]\^2\) \(\(A\_2\^2\)[\(C\_2[B]\
+\^2\) p]\)\_BB + \([\((\(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\) C\_1[S \
++ B] C\_2[B] - \ \(\[Epsilon]\^2\) \(A\_2\^2\) C\_2[B]\^2)\) \
+p]\)\_SB}\)\)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(Now\ we\ integrate\ by\ parts\ with\ S\ and\ taking\ into\ account\ \
+C\_2[0] = 0\)], "Input"],
+
+Cell[BoxData[{
+    \(\[Integral]\_0\%\[Infinity]\[DifferentialD]B \(\[Integral]\_0\%\
+\[Infinity]\[DifferentialD]S \(\(\((S - K)\)\^+\)[\((1\/2\ \(\[Epsilon]\^2\) \
+\(A\_1\^2\) C\_1[S + B]\^2 + 1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) C\_2[B]\^2 - \
+\(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\) C\_1[S + B] C\_2[B])\) \
+p]\)\_SS\)\), "\[IndentingNewLine]", 
+    \(\(\(=\)\(\[Integral]\_0\%\[Infinity]\[DifferentialD]B \((1\/2\ \(\
+\[Epsilon]\^2\) \(A\_1\^2\) C\_1[K + B]\^2 + 
+              1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) 
+                C\_2[B]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\) 
+                C\_1[K + B] C\_2[B])\) p\_\(S = K\)\)\)\)}], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[Integral]\_0\%\[Infinity]\[DifferentialD]B \(\[Integral]\_K\%\
+\[Infinity]\[DifferentialD]S \(\((S - K)\)[\((\(\[Epsilon]\^2\) \[Rho]\_s\ \
+\(A\_1\) \(A\_2\) C\_1[S + B] C\_2[B] - \ \(\[Epsilon]\^2\) \(A\_2\^2\) \
+C\_2[B]\^2)\) p]\)\_SB\) = \[IndentingNewLine]\(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]B \(\[Integral]\_K\%\[Infinity]\[DifferentialD]\(S[\((\(\
+\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \(A\_2\) C\_1[S + B] C\_2[B] - \ \(\
+\[Epsilon]\^2\) \(A\_2\^2\) C\_2[B]\^2)\) p]\)\_B\) = \[IndentingNewLine]\(\
+\[Integral]\_K\%\[Infinity]\[DifferentialD]S[\((\(\[Epsilon]\^2\) \[Rho]\_s\ \
+\(A\_1\) \(A\_2\) C\_1[S + B] C\_2[0] - \ \(\[Epsilon]\^2\) \(A\_2\^2\) 
+                        C\_2[0]\^2)\) p] = 0\)\)\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(we\ also\ \(\(have\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[Integral]\_0\%\[Infinity]\[DifferentialD]S \(\((S - 
+                  K)\)\^+\) \(\[Integral]\_0\%\[Infinity]\[DifferentialD]B 
+               1\/2\ \(\[Epsilon]\^2\) \(\(A\_2\^2\)[\(C\_2[B]\^2\) \
+p]\)\_BB\) = 0\)], "Input"],
+
+Cell[BoxData[
+    \(so\ in\ summary\ we\ \(\(have\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(V[t, f\_1, 
+        f\_2, \[Alpha]\_1, \[Alpha]\_2] = \(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]T \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_1 \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]A\_2 \(\[Integral]\_0\%\[Infinity]\[DifferentialD]B \((1\/2\ \
+\(\[Epsilon]\^2\) \(A\_1\^2\) C\_1[K + B]\^2 + 
+                            1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) 
+                              C\_2[B]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \
+\(A\_1\) \(A\_2\) C\_1[K + B] C\_2[B])\) p\_\(S = K\)\)\)\)\)], "Input",
+  TextAlignment->Center,
+  Background->RGBColor[1, 1, 0]],
+
+Cell[BoxData[
+    \(\(\(let'\) \(s\)\(\ \)\(define\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(P[t, f\_1, 
+        f\_2, \[Alpha]\_1, \[Alpha]\_2] = \[Integral]\_0\%\[Infinity]\
+\[DifferentialD]A\_1 \(\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_2 \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]B \((1\/2\ \(\[Epsilon]\^2\) \
+\(A\_1\^2\) C\_1[K + B]\^2 + 
+                      1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) 
+                        C\_2[B]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \
+\(A\_2\) C\_1[K + B] C\_2[B])\) p\_\(S = K\)\)\)\)], "Input",
+  Background->RGBColor[0.933333, 0.690196, 0.65098]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(we\ know\ that\ the\ density\ satisfy\ the\ \
+backward\ kolmogoroff\ \(\(equation\)\(\ \)\(:\)\(\ \)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[PartialD]\_t p\) == 
+      1\/2\ \[Epsilon]\^2\ \[Alpha]\_1\^2\ \(C\_1[
+                f\_1]\^2\) \[PartialD]\^2 p\/\[PartialD]f\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                f\_2]\^2\) \[PartialD]\^2 p\/\[PartialD]f\_2\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 p\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 p\/\[PartialD]\[Alpha]\_2\^2 + \[InvisibleSpace]\[Epsilon]\^2\ \
+\[Rho]\_1\ \(\[Nu]\_1\) \[Alpha]\_1\^2\ C\_1[
+            f\_1] \[PartialD]\^2 p\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_2\ \(\[Nu]\_2\) \[Alpha]\_2\^2\ \
+C\_2[f\_2] \[PartialD]\^2 p\/\(\[PartialD]\[Alpha]\_2 \[PartialD]f\_2\) + \
+\[Epsilon]\^2\ \[Rho]\_c12\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \(\(\[Alpha]\)\(\ \)\
+\)\_1\ C\_1[
+            f\_1] \[PartialD]\^2 p\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \
+\(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            f\_2] \[PartialD]\^2 p\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+            F\_1] \[Alpha]\_2\ C\_2[
+            F\_2] \[PartialD]\^2 p\/\(\[PartialD]f\_1 \[PartialD]f\_2\) + \(\
+\[Epsilon]\^2\) \(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\
+\[Alpha]\_2\) \[PartialD]\^2 p\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\)\)], "Input"],
+
+Cell[BoxData[
+    \(with\ p = \(\[Delta][S - \((f\_1 - f\_2)\)] \[Delta][B - f\_2] \[Delta][
+            A\_1 - \[Alpha]\_1] \[Delta][A\_2 - \[Alpha]\_2]\ \ \ at\ T = 
+        t\)\)], "Input"],
+
+Cell[BoxData[
+    \(so\ we\ deduce\ that\ P\ \(\(satisfy\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[PartialD]\_t P\) == 
+      1\/2\ \[Epsilon]\^2\ \[Alpha]\_1\^2\ \(C\_1[
+                f\_1]\^2\) \[PartialD]\^2 P\/\[PartialD]f\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                f\_2]\^2\) \[PartialD]\^2 P\/\[PartialD]f\_2\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 + \[InvisibleSpace]\[Epsilon]\^2\ \
+\[Rho]\_1\ \(\(\(\[Alpha]\)\(\ \)\)\_1\) \(\[Nu]\_1\) \[Alpha]\_1\ C\_1[
+            f\_1] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \
+\(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            f\_2] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \[Rho]\_c12\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+            f\_1] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_1\) + \[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \
+\(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            f\_2] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+            F\_1] \[Alpha]\_2\ C\_2[
+            F\_2] \[PartialD]\^2 P\/\(\[PartialD]f\_1 \[PartialD]f\_2\) + \(\
+\[Epsilon]\^2\) \(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\
+\[Alpha]\_2\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\)\)], "Input"],
+
+Cell[BoxData[
+    \(with\ P[
+          t]\  = \ \(\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_1 \(\
+\[Integral]\_0\%\[Infinity]\[DifferentialD]A\_2 \(\[Integral]\_0\%\[Infinity]\
+\[DifferentialD]B \((1\/2\ \(\[Epsilon]\^2\) \(A\_1\^2\) C\_1[K + B]\^2 + 
+                        1\/2\ \(\[Epsilon]\^2\) \(A\_2\^2\) 
+                          C\_2[B]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(A\_1\) \
+\(A\_2\) C\_1[K + B] C\_2[B])\) \[Delta][S - K] \[Delta][B - f\_2] \[Delta][
+                      A\_1 - \[Alpha]\_1] \[Delta][
+                      A\_2 - \[Alpha]\_2]\)\)\  = \[IndentingNewLine]\((1\/2\ \
+\(\[Epsilon]\^2\) \(\[Alpha]\_1\^2\) C\_1[K + f\_2]\^2 + 
+              1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_2\^2\) 
+                C\_2[f\_2]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(\[Alpha]\_1\) \
+\(\[Alpha]\_2\) C\_1[K + f\_2] C\_2[f\_2])\) \[Delta][S - K]\)\)], "Input"],
+
+Cell[BoxData[
+    \(So\ in\ summary\ we\ have\ to\ \(\(solve\)\(\ \)\(:\)\(\ \)\)\)], \
+"Input"],
+
+Cell[BoxData[{
+    \(\(-\[PartialD]\_t P\) == 
+      1\/2\ \[Epsilon]\^2\ \[Alpha]\_1\^2\ \(C\_1[
+                f\_1]\^2\) \[PartialD]\^2 P\/\[PartialD]f\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                f\_2]\^2\) \[PartialD]\^2 P\/\[PartialD]f\_2\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 + \[IndentingNewLine]\
+\[InvisibleSpace]\[Epsilon]\^2\ \[Rho]\_1\ \(\[Nu]\_1\) \[Alpha]\_1\^2\ C\_1[
+            f\_1] \(\[PartialD]\^2 
+                P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]f\_1\)\) \[Epsilon]\^2\
+\ \[Rho]\_2\ \(\[Nu]\_2\) \[Alpha]\_2\^2\ C\_2[
+            f\_2] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \[Rho]\_c12\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+            f\_1] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]f\_1\) + \[IndentingNewLine]\[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\
+\) \(\[Alpha]\_1\) \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            f\_2] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]f\_2\) + \[Epsilon]\^2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+            f\_1] \[Alpha]\_2\ C\_2[
+            f\_2] \[PartialD]\^2 P\/\(\[PartialD]f\_1 \[PartialD]f\_2\) + \(\
+\[Epsilon]\^2\) \(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\
+\[Alpha]\_2\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\)\), "\[IndentingNewLine]", 
+    \(with\ P[
+          0] = \((1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_1\^2\) 
+              C\_1[K + f\_2]\^2 + 
+            1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_2\^2\) 
+              C\_2[f\_2]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(\[Alpha]\_1\) \(\
+\[Alpha]\_2\) C\_1[K + f\_2] C\_2[f\_2])\) \[Delta][
+          f\_1 - f\_2 - K]\), "\[IndentingNewLine]", 
+    \(Then\ the\ value\ of\ the\ call\ spreadoption\ \(is\  : \ \
+\[IndentingNewLine]V[t\_tex, f\_1, 
+            f\_2, \[Alpha]\_1, \[Alpha]\_2]\) = \(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]TP[t, 
+              f\_1, f\_2, \[Alpha]\_1, \[Alpha]\_2]\)}], "Input",
+  TextAlignment->Center,
+  Background->RGBColor[0.380392, 0.952941, 0.407843]],
+
+Cell[BoxData[
+    \(that\ we\ can\ also\ write\ in\ the\ spread\ \ variables\ \(\(as\)\(\ \
+\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(-\[PartialD]\_t P\) == 
+      1\/2\ \[Epsilon]\^2\ \[Alpha]\_1\^2\ \(C\_1[
+                f\_1]\^2\) \((\[PartialD]\^2 P\/\[PartialD]s\^2)\) + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                f\_2]\^2\) \((\[PartialD]\^2 P\/\[PartialD]b\^2 + \[PartialD]\
+\^2 P\/\[PartialD]s\^2 - 
+              2 \[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]s\))\) + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 + \[InvisibleSpace]\[Epsilon]\^2\ \
+\[Rho]\_1\ \(\[Nu]\_1\) \[Alpha]\_1\^2\ C\_1[
+            f\_1] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]s\) + \
+\[Epsilon]\^2\ \[Rho]\_2\ \(\[Nu]\_2\) \[Alpha]\_2\^2\ C\_2[
+            f\_2] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]b\) - \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \[PartialD]s\))\) \
++ \[Epsilon]\^2\ \[Rho]\_c12\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \(\(\[Alpha]\)\(\ \
+\)\)\_1\ C\_1[
+            f\_1] \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \[PartialD]s\) + \
+\[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\(\[Alpha]\)\(\ \)\
+\)\_2\ C\_2[
+            f\_2] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]b\) - \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]s\))\) \
++ \[Epsilon]\^2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[f\_1] \[Alpha]\_2\ C\_2[
+            f\_2] \((\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]b\) - \
+\[PartialD]\^2 P\/\[PartialD]s\^2)\) + \(\[Epsilon]\^2\) \(\[Rho]\_v\) \
+\(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \[PartialD]\^2 \
+P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\[Alpha]\_2\)\), \
+"\[IndentingNewLine]", 
+    \(with\ P[
+          0] = \((1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_1\^2\) C\_1[K + b]\^2 + 
+            1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_2\^2\) 
+              C\_2[b]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(\[Alpha]\_1\) \(\
+\[Alpha]\_2\) C\_1[K + b] C\_2[b])\) \[Delta][
+          s - K]\), "\[IndentingNewLine]", 
+    \(Then\ the\ value\ of\ the\ call\ spreadoption\ \(is\  : \ \
+\[IndentingNewLine]V[t\_tex, f\_1, 
+            f\_2, \[Alpha]\_1, \[Alpha]\_2]\) = \(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]TP[t, 
+              s + b, b, \[Alpha]\_1, \[Alpha]\_2]\)}], "Input"],
+
+Cell[BoxData[
+    \(that\ we\ reorganize\ \(\(as\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(-\[PartialD]\_t P\) \[Equal] 
+      1\/2\ \(\[Epsilon]\^2\) \((\ \[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \
+\[Alpha]\_2\^2\ C\_2[b]\^2 - 
+              2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\[PartialD]s\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                b]\^2\) \[PartialD]\^2 P\/\[PartialD]b\^2 + \
+\[IndentingNewLine]\(\[Epsilon]\^2\) \[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]s\) + \
+\[InvisibleSpace]\(\[Epsilon]\^2\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \((\ \
+\[Rho]\_1\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]s\) + \[IndentingNewLine]\[Epsilon]\^2\ \(\[Nu]\_2\) \(\[Alpha]\_2\
+\) \((\[Rho]\_c12\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]s\) + \[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \
+\(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            b] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]b\))\) + \[IndentingNewLine]\[Epsilon]\^2\ \[Rho]\_2\ \(\(\(\
+\[Alpha]\)\(\ \)\)\_2\) \(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            b] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]b\))\) + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 + \(\[Epsilon]\^2\) \(\[Rho]\_v\) \
+\(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \[PartialD]\^2 \
+P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\[Alpha]\_2\)\), \
+"\[IndentingNewLine]", 
+    \(with\ P[
+          0] = \((1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_1\^2\) C\_1[K + b]\^2 + 
+            1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_2\^2\) 
+              C\_2[b]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(\[Alpha]\_1\) \(\
+\[Alpha]\_2\) C\_1[K + b] C\_2[b])\) \[Delta][
+          s - K]\), "\[IndentingNewLine]", 
+    \(Then\ the\ value\ of\ the\ call\ spreadoption\ \(is\  : \ \
+\[IndentingNewLine]V[t\_tex, f\_1, 
+            f\_2, \[Alpha]\_1, \[Alpha]\_2]\) = \(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]TP[t, 
+              s + b, b, \[Alpha]\_1, \[Alpha]\_2]\)}], "Input",
+  Background->RGBColor[0.454902, 0.847059, 0.878431]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\
+\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\
+\(**\)\(**\)\(**\)\(**\)\(**\)\)*\(\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\
+\)\ \[IndentingNewLine]
+    \(\(*\)\(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \)\(Start\)\(\ \)\(of\)\(\ \)\(the\)\(\ \)\(singular\)\(\ \
+\)\(perturbation\)\(\ \)\(simplification\)\(\ \)\(process\)\(\ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \)\(*\)\(\
+\[IndentingNewLine]\)\(\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\
+\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\
+\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\(**\)\)\(\ \)\(*\)\(\
+\[IndentingNewLine]\)\)\)\)\)], "Input",
+  TextAlignment->Center,
+  Background->RGBColor[0.976471, 0.34902, 0.537255]],
+
+Cell[BoxData[
+    \(\(\(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \)\(\(Try\)\(\ \)\(to\)\(\ \)\(get\)\(\ \)\(closer\)\(\ \)\(to\)\(\ \)\(a\)\
+\(\ \)\(SABR\)\(\ \)\(like\)\(\ \)\(equation\)\(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \)\)\)\)], "Input",
+  TextAlignment->Center,
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    RowBox[{"(*", " ", 
+      RowBox[{
+        RowBox[{
+          RowBox[{
+          "We", " ", "want", " ", "to", " ", "get", " ", "closer", " ", "to", 
+            " ", "the", " ", "following", " ", "equation", " ", "following", 
+            " ", "stochastic", " ", 
+            RowBox[{
+            "process", ":", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              "\t\t\t\t\t", 
+              StyleBox["ds",
+                FontSize->24]}]}], 
+          StyleBox["=",
+            FontSize->24], 
+          StyleBox[" ",
+            FontSize->24], 
+          RowBox[{
+            StyleBox["\[Alpha]",
+              FontSize->24], 
+            StyleBox[" ",
+              FontSize->18], 
+            StyleBox[\(U[s]\),
+              FontSize->18], 
+            StyleBox[" ",
+              FontSize->24], 
+            StyleBox[\(dW\_1\),
+              FontSize->24]}]}], 
+        StyleBox[";",
+          FontSize->14], 
+        StyleBox["\[IndentingNewLine]",
+          FontSize->24], 
+        StyleBox["\[IndentingNewLine]",
+          FontSize->24], "\t\t\t\t\t\t", 
+        StyleBox[\(d\[Alpha] = \ \[Mu]\ dt + \[Nu]\ \[Alpha]\ dW\_\(\(2\)\(\
+\[IndentingNewLine]\)
+                  \)\),
+          FontSize->24], 
+        StyleBox[";",
+          FontSize->24], 
+        StyleBox["  ",
+          FontSize->24], 
+        StyleBox["\[IndentingNewLine]",
+          FontSize->24], "\t\t\t\t\t\t", 
+        StyleBox[\(\(dW\_1\) dW\_2 = \[Rho]\ dt\),
+          FontSize->24], 
+        StyleBox[";",
+          FontSize->24]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "*)"}]], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(where\ U[F]\ is\ never\ 0\ , \ 
+    that\ means\ U[
+        F]\ keep\ the\ same\ sign\ and\ \(\[Integral]\_K\%f\( 
+              1\/U[s]\) \[DifferentialD]s\ is\ defined\ so\ \@\(B[\[Alpha]\ z\
+\ \[Epsilon]]/B[0]\)\ is\ also\ defined\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(In\ order\ to\ Keep\ the\ spread\ with\ the\ same\ sign\), ",", 
+      " ", \(we\ will\ shift\ the\ spread\ axis\ and\ the\ strike\), ",", " ",
+       
+      RowBox[{
+      "so", " ", "the", " ", "type", " ", "of", " ", "functions", " ", 
+        StyleBox[\(U[s]\),
+          FontSize->18], 
+        StyleBox[" ",
+          FontSize->18], 
+        StyleBox["will",
+          FontSize->18], 
+        StyleBox[" ",
+          FontSize->18], 
+        StyleBox[\(\(be\)\(\ \)\(:\)\(\ \)\),
+          FontSize->18]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      StyleBox[\(U[s]\),
+        FontSize->18], 
+      StyleBox["=",
+        FontSize->18], 
+      StyleBox[" ",
+        FontSize->18], 
+      SuperscriptBox[
+        StyleBox[\((s + A)\),
+          FontSize->18], "\[Beta]"]}]], "Input"],
+
+Cell[BoxData[
+    \(\(\(\ \)\(First\ Change\ of\ \(Variable\  : \ \(purpose\  : \ \
+\(\(to\)\(\ \)\(introduce\)\(\ \)\(the\)\(\ \)\(volatility\)\(\ \)\(of\)\(\ \
+\)\(the\)\(\ \)\(spread\)\(\ \)\(as\)\(\ \)\(a\)\(\ \)\(variable\)\(\ \
+\)\)\)\)\)\)\)], "Input",
+  TextAlignment->Center,
+  Background->GrayLevel[0.900008],
+  FontVariations->{"Underline"->True}],
+
+Cell[BoxData[
+    \(s\_1 = s\)], "Input"],
+
+Cell[BoxData[
+    \(b\_1 = b\)], "Input"],
+
+Cell[BoxData[
+    \(\[Alpha]\_11 = \ \@\(\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ \
+C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b]\)\
+\)], "Input"],
+
+Cell[BoxData[
+    \(\[Alpha]\_22 = \[Alpha]\_2\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_11\/\[PartialD]s = \(\(\(\[Alpha]\_1\) \((\[Alpha]\
+\_1\ C\_1[s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[b])\) \(C\_1\^\[Prime]\)[s \
++ b]\)\/\@\(\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\
+\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b]\) = 
+        Q\_s\/Q\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_11\/\[PartialD]b = \(\(\(\[Alpha]\_1\) \((\[Alpha]\
+\_1\ C\_1[s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[b])\) \(C\_1\^\[Prime]\)[s \
++ b] + \(\[Alpha]\_2\) \((\(\[Alpha]\_2\) C\_2[b]\  - \ \[Rho]\_s\ \(\[Alpha]\
+\_1\) C\_1[s + b]\ )\) \(C\_2\^\[Prime]\)[b]\)\/\@\(\[Alpha]\_1\^2\ C\_1[s + \
+b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + \
+b] \[Alpha]\_2\ C\_2[b]\) = Q\_b\/Q\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_11\/\[PartialD]\[Alpha]\_1 = \(\(C\_1[s + b] \((\(\
+\[Alpha]\_1\) C\_1[s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[b])\)\)\/\@\(\
+\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b]\) = 
+        Q\_1\/Q\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_11\/\[PartialD]\[Alpha]\_2 = \(\(C\_2[b] \((\(\
+\[Alpha]\_2\) C\_2[b] - \ \[Rho]\_s\ \[Alpha]\_1\ C\_1[s + b])\)\)\/\@\(\
+\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b]\) = 
+        Q\_2\/Q\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(or\)\(\ \)\(to\)\(\ \)\(find\)\(\ \)\(a\)\(\ \)\(change\)\(\ \)\(of\
+\)\(\ \)\(variable\)\(\ \)\(that\)\(\ \)\(normalize\)\(\ \)\(in\)\(\ \
+\)\(one\)\(\ \)\(shot\)\(\ \)\(the\)\(\ \)\(quadratic\)\(\ \)\(form\)\(\ \)\)\
+\)], "Input"],
+
+Cell[BoxData[
+    \(We\ \(\(have\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]P\/\[PartialD]s = \(\(\[PartialD]P\/\[PartialD]s\_1\) \
+\[PartialD]s\_1\/\[PartialD]s + \(\[PartialD]P\/\[PartialD]b\_1\) \
+\[PartialD]b\_1\/\[PartialD]s + \(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) \
+\[PartialD]\[Alpha]\_11\/\[PartialD]s + \
+\(\[PartialD]P\/\[PartialD]\[Alpha]\_22\) \
+\[PartialD]\[Alpha]\_22\/\[PartialD]s = \(\[PartialD]P\/\[PartialD]s\_1 + \
+\(\(\(\[Alpha]\_1\) \((\[Alpha]\_1\ C\_1[
+                            s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[
+                            b])\) \(C\_1\^\[Prime]\)[
+                      s + b]\)\/\@\(\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \
+\[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \
+\[Alpha]\_2\ C\_2[b]\)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 = \[PartialD]P\
+\/\[PartialD]s\_1 + \(Q\_s\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\[PartialD]P\/\[PartialD]b = \(\(\[PartialD]P\/\[PartialD]s\_1\) \
+\[PartialD]s\_1\/\[PartialD]b + \(\[PartialD]P\/\[PartialD]b\_1\) \
+\[PartialD]b\_1\/\[PartialD]b + \(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) \
+\[PartialD]\[Alpha]\_11\/\[PartialD]b + \
+\(\[PartialD]P\/\[PartialD]\[Alpha]\_22\) \
+\[PartialD]\[Alpha]\_22\/\[PartialD]b = \(\[PartialD]P\/\[PartialD]b\_1 + \
+\(\(\(\[Alpha]\_1\) \((\[Alpha]\_1\ C\_1[
+                              s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[
+                              b])\) \(C\_1\^\[Prime]\)[
+                        s + b] + \(\[Alpha]\_2\) \((\(\[Alpha]\_2\) 
+                            C\_2[b]\  - \ \[Rho]\_s\ \(\[Alpha]\_1\) 
+                            C\_1[s + b]\ )\) \(C\_2\^\[Prime]\)[
+                        b]\)\/\@\(\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\
+\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\
+\_2[b]\)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 = \[PartialD]P\/\[PartialD]b\
+\_1 + \(Q\_b\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]P\/\[PartialD]\[Alpha]\_1 = \
+\(\(\[PartialD]P\/\[PartialD]s\_1\) \[PartialD]s\_1\/\[PartialD]\[Alpha]\_1 + \
+\(\[PartialD]P\/\[PartialD]b\_1\) \[PartialD]b\_1\/\[PartialD]\[Alpha]\_1 + \
+\(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) \
+\[PartialD]\[Alpha]\_11\/\[PartialD]\[Alpha]\_1 + \(\[PartialD]P\/\[PartialD]\
+\[Alpha]\_22\) \[PartialD]\[Alpha]\_22\/\[PartialD]\[Alpha]\_1 = \(\(\(2 
+                   C\_1[s + 
+                      b] \((\(\[Alpha]\_1\) 
+                        C\_1[s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[
+                          b])\)\)\/\(2 \@\( \[Alpha]\_1\^2\ C\_1[s + b]\^2 + \
+\ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + b] \
+\[Alpha]\_2\ C\_2[b]\)\)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 = \
+\(Q\_1\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]P\/\[PartialD]\[Alpha]\_2 = \
+\(\(\[PartialD]P\/\[PartialD]s\_1\) \[PartialD]s\_1\/\[PartialD]\[Alpha]\_2 + \
+\(\[PartialD]P\/\[PartialD]b\_1\) \[PartialD]b\_1\/\[PartialD]\[Alpha]\_2 + \
+\(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) \
+\[PartialD]\[Alpha]\_11\/\[PartialD]\[Alpha]\_2 + \(\[PartialD]P\/\[PartialD]\
+\[Alpha]\_22\) \[PartialD]\[Alpha]\_22\/\[PartialD]\[Alpha]\_2 = \(\(\(2 
+                     C\_2[b] \((\(\[Alpha]\_2\) 
+                          C\_2[b] - \ \[Rho]\_s\ \[Alpha]\_1\ C\_1[
+                            s + b])\)\)\/\(2 \@\( \[Alpha]\_1\^2\ C\_1[s + b]\
+\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[s + \
+b] \[Alpha]\_2\ C\_2[b]\)\)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \
+\[PartialD]P\/\[PartialD]\[Alpha]\_22 = \(Q\_2\/Q\) \[PartialD]P\/\[PartialD]\
+\[Alpha]\_11 + \[PartialD]P\/\[PartialD]\[Alpha]\_22\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(where\ Q\_s\  = \(Q\ \[PartialD]Q\/\[PartialD]s\ \ and\ so\ on\  . \ \ \
+and\ also\ \ Q\_s\  = 
+        1\/2\ \[PartialD]\((Q\^2)\)\/\[PartialD]s\)\), "\[IndentingNewLine]", \
+
+    \(therefore\ \), "\[IndentingNewLine]", 
+    \(\(\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) = \(\(\[PartialD]Q\_s\/\
+\[PartialD]s\)/
+            Q - \(Q\_s\) \(\[PartialD]Q\/\[PartialD]s\)/
+              Q\^2 = \(\(\[PartialD]Q\_s\/\[PartialD]s\)/Q - 
+            Q\_s\^2\/Q\^3 = \(\(Q\^2\) \[PartialD]Q\_s\/\[PartialD]s - \
+Q\_s\^2\)\/Q\^3\)\)\)}], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(the\ same\ for\ the\ \(\(others\)\(\ \)\(:\)\
+\(\ \)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \((Q\_b\/Q)\) = \(\(\[PartialD]Q\_b\/\
+\[PartialD]s\)/
+            Q - \(Q\_b\) \(\[PartialD]Q\/\[PartialD]s\)/
+              Q\^2 = \(\(Q\^2\) \[PartialD]Q\_b\/\[PartialD]s - \(Q\_s\) Q\_b\
+\)\/Q\^3\)\)], "Input"],
+
+Cell[BoxData[
+    \(In\ the\ case\ of\ the\ SABR\ \(Moels : \ 
+        we\ \(\(have\)\(\ \)\(:\)\)\)\)], "Input"],
+
+Cell[BoxData[{\(C\_1[
+          s + b] = \((F\_1)\)\^\[Beta]\_1;\), "\[IndentingNewLine]", \(C\_2[
+          b] = \((F\_2)\)\^\[Beta]\_2;\), "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}], 
+        "=", \(\(\[Beta]\_1\) \((F\_1)\)\^\(\[Beta]\_1 - 1\)\)}], 
+      ";"}], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}], 
+        "=", \(\(\[Beta]\_2\) \((F\_2)\)\^\(\[Beta]\_2 - 1\)\)}], 
+      ";"}], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}], 
+        "=", \(\((\[Beta]\_1 - 
+              1)\) \(\[Beta]\_1\) \((F\_1)\)\^\(\[Beta]\_1 - 2\)\)}], 
+      ";"}], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}], 
+        "=", \(\((\[Beta]\_2 - 
+              1)\) \(\[Beta]\_2\) \((F\_2)\)\^\(\[Beta]\_2 - 2\)\)}], 
+      ";"}], "\[IndentingNewLine]", }], "Input"],
+
+Cell[BoxData[
+    \(Clear[\[Alpha], \[Beta], \[Rho], \[Nu]]\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(so\)\(\ \)\(we\)\(\ \)\(define\)\(\ \)\)\)\
+\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Q = \@\(\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - \
+2\ \(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b]\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\@\(\[Alpha]\_1\%2\ C\_1[b + s]\^2 - 2\ \[Alpha]\_1\ \[Alpha]\_2\ \
+\[Rho]\_spread\ C\_1[b + s]\ C\_2[b] + \[Alpha]\_2\%2\ C\_2[b]\^2\)\)], \
+"Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(Q\_1 = 
+      2  C\_1[s + 
+            b] \((\(\[Alpha]\_1\) 
+              C\_1[s + b] - \ \[Rho]\_s\ \[Alpha]\_2\ C\_2[b])\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(Q\_2 = 
+      2  C\_2[b] \((\(\[Alpha]\_2\) 
+              C\_2[b] - \ \[Rho]\_s\ \[Alpha]\_1\ C\_1[
+                s + b])\)\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(Q\_s\), "=", 
+      RowBox[{
+        RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+        RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+          " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}]}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_s = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], s]\/2]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    RowBox[{\(Q\_F1\), "=", 
+      RowBox[{
+        RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[F1]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", "F1", "]"}]}], "-", 
+        RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+          " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", "F1", "]"}]}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_F1 = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[F1]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\
+\[Rho]\_spread\) \[Alpha]\_1\ C\_1[F1] \[Alpha]\_2\ C\_2[b], F1]\/2]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[F1]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", "F1", "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", "F1", "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    RowBox[{\(Q\_b\), "=", 
+      RowBox[{
+        RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+        RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+          " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+        "\[IndentingNewLine]", 
+        RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+          " ", \(\[Rho]\_spread\), " ", \(C\_1[b + s]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_2\), "\[Prime]",
+              MultilineFunction->None], "[", "b", "]"}]}], "+", 
+        RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_2\), "\[Prime]",
+              MultilineFunction->None], "[", "b", "]"}]}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_b = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], b]\/2]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}], "+", 
+      RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    RowBox[{\(Q\_F2\), "=", 
+      RowBox[{
+        RowBox[{\(-\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+          " ", \(\[Rho]\_spread\), " ", \(C\_1[F1]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_2\), "\[Prime]",
+              MultilineFunction->None], "[", "b", "]"}]}], "+", 
+        RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+          RowBox[{
+            SuperscriptBox[\(C\_2\), "\[Prime]",
+              MultilineFunction->None], "[", "b", "]"}]}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_F2 = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[F1]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\
+\[Rho]\_spread\) \[Alpha]\_1\ C\_1[F1] \[Alpha]\_2\ C\_2[b], b]\/2]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(-\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\),
+         " ", \(C\_1[F1]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}], "+", 
+      RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\ \)\(Q\_\(\[Alpha]\_1\) = \[Alpha]\_1\ C\_1[b + s]\^2 - \
+\[Alpha]\_2\ \[Rho]\_spread\ C\_1[b + s]\ C\_2[b]\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_\(\[Alpha]\_1\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], \
+\[Alpha]\_1]\/2]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\[Alpha]\_1\ C\_1[b + s]\^2 - \[Alpha]\_2\ \[Rho]\_spread\ C\_1[
+          b + s]\ C\_2[b]\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(Q\_\(\[Alpha]\_2\) = \(-\[Alpha]\_1\)\ \[Rho]\_spread\ C\_1[
+            b + s]\ C\_2[b] + \[Alpha]\_2\ C\_2[b]\^2\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(Q\_\(\[Alpha]\_2\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], \
+\[Alpha]\_2]\/2]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[Alpha]\_1\)\ \[Rho]\_spread\ C\_1[b + s]\ C\_2[
+          b] + \[Alpha]\_2\ C\_2[b]\^2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_ss\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\[PartialD]s\^2\ *) \)\(Q\_ss = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], s, s]\/2]\)\
+\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", 
+        SuperscriptBox[
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}], "2"]}], "+", 
+      RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) = \(\(Q\^2\) Q\_ss - \
+Q\_s\^2\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_sb\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]s \[PartialD]b\)\ *) \
+\)\(Q\_sb = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], s, b]\/2]\)\
+\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", 
+        SuperscriptBox[
+          RowBox[{
+            SuperscriptBox[\(C\_1\), "\[Prime]",
+              MultilineFunction->None], "[", \(b + s\), "]"}], "2"]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}], " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}], "+", 
+      RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]b\) \((Q\_s\/Q)\) = \(\(Q\^2\) Q\_sb - \(Q\_s\
+\) Q\_b\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(s\[Alpha]\_1\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]s \[PartialD]\[Alpha]\_1\
+\)\ *) \)\(Q\_\(s\[Alpha]\_1\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], s, \[Alpha]\
+\_1]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{"2", " ", \(\[Alpha]\_1\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ",
+         
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_s\/Q)\) = \(\(Q\^2\) \
+Q\_\(s\[Alpha]\_1\) - \(Q\_s\) Q\_\(\[Alpha]\_1\)\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(s\[Alpha]\_2\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]s \[PartialD]\[Alpha]\_2\
+\)\ *) \)\(Q\_\(s\[Alpha]\_2\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], s, \[Alpha]\
+\_2]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(-\[Alpha]\_1\), " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ", 
+      
+      RowBox[{
+        SuperscriptBox[\(C\_1\), "\[Prime]",
+          MultilineFunction->None], "[", \(b + s\), "]"}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_s\/Q)\) = \(\(Q\^2\) \
+Q\_\(s\[Alpha]\_2\) - \(Q\_s\) Q\_\(\[Alpha]\_2\)\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_bb\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\[PartialD]b\^2\ *) \)\(Q\_bb = 
+      Simplify[Distribute[
+          D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\
+\ \(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], b, \
+b]\/2]]\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(\[Alpha]\_1\%2\), " ", 
+        RowBox[{"(", 
+          RowBox[{
+            SuperscriptBox[
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}], "2"], "+", 
+            
+            RowBox[{\(C\_1[b + s]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}]}], 
+          ")"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), 
+        " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"2", " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}], " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}]}], "+", 
+            RowBox[{\(C\_2[b]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "+", 
+            RowBox[{\(C\_1[b + s]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}]}]}], ")"}]}], "+",
+       
+      RowBox[{\(\[Alpha]\_2\%2\), " ", 
+        RowBox[{"(", 
+          RowBox[{
+            SuperscriptBox[
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}], "2"], "+", 
+            RowBox[{\(C\_2[b]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}]}]}], 
+          ")"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]b\) \((Q\_b\/Q)\) = \(\(Q\^2\) Q\_bb - \
+Q\_b\^2\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(b\[Alpha]\_1\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]b \[PartialD]\[Alpha]\_1\
+\)\ *) \)\(Q\_\(b\[Alpha]\_1\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], b, \[Alpha]\
+\_1]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{"2", " ", \(\[Alpha]\_1\), " ", \(C\_1[b + s]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), " ",
+         
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_2\), " ", \(\[Rho]\_spread\), " ", \(C\_1[b + s]\), 
+        " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_b\/Q)\) = \(\(Q\^2\) \
+Q\_\(b\[Alpha]\_1\) - \(Q\_b\) Q\_\(\[Alpha]\_1\)\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(b\[Alpha]\_2\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]b \[PartialD]\[Alpha]\_2\
+\)\ *) \)\(Q\_\(b\[Alpha]\_2\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], b, \[Alpha]\
+\_2]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(-\[Alpha]\_1\), " ", \(\[Rho]\_spread\), " ", \(C\_2[b]\), 
+        " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_1\), "\[Prime]",
+            MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+      RowBox[{\(\[Alpha]\_1\), " ", \(\[Rho]\_spread\), " ", \(C\_1[b + s]\), 
+        " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}], "+", 
+      RowBox[{"2", " ", \(\[Alpha]\_2\), " ", \(C\_2[b]\), " ", 
+        RowBox[{
+          SuperscriptBox[\(C\_2\), "\[Prime]",
+            MultilineFunction->None], "[", "b", "]"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_b\/Q)\) = \(\(Q\^2\) \
+Q\_\(b\[Alpha]\_2\) - \(Q\_b\) Q\_\(\[Alpha]\_2\)\)\/Q\^3\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \((Q\_b\/Q)\) = \(\(Q\^2\) Q\_bs - \(Q\_s\
+\) Q\_b\)\/Q\^3\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ \ Q\_\(\(\[Alpha]\_1\) \[Alpha]\_1\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\[PartialD]\[Alpha]\_1\^2\ *) \)\(Q\_\
+\(\(\[Alpha]\_1\) \[Alpha]\_1\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], \
+\[Alpha]\_1, \[Alpha]\_1]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(C\_1[b + s]\^2\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_\(\[Alpha]\_1\)\/Q)\) = \
+\(\(Q\^2\) Q\_\(\(\[Alpha]\_1\) \[Alpha]\_1\) - Q\_\(\[Alpha]\_1\)\^2\)\/Q\^3\
+\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(\(\[Alpha]\_2\) \[Alpha]\_2\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\[PartialD]\[Alpha]\_2\^2\ *) \)\(Q\_\
+\(\(\[Alpha]\_2\) \[Alpha]\_2\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], \
+\[Alpha]\_2, \[Alpha]\_2]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(C\_2[b]\^2\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_\(\[Alpha]\_2\)\/Q)\) = \
+\(\(Q\^2\) Q\_\(\(\[Alpha]\_2\) \[Alpha]\_2\) - Q\_\(\[Alpha]\_2\)\^2\)\/Q\^3\
+\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Q\_\(\(\[Alpha]\_1\) \[Alpha]\_2\)\  = 
+        1\/2\ \[PartialD]\^2\((Q\^2)\)\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\
+\[Alpha]\_2\)\ *) \)\(Q\_\(\(\[Alpha]\_1\) \[Alpha]\_2\) = 
+      Distribute[
+        D[\[Alpha]\_1\^2\ C\_1[s + b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \
+\(\[Rho]\_spread\) \[Alpha]\_1\ C\_1[s + b] \[Alpha]\_2\ C\_2[b], \
+\[Alpha]\_1, \[Alpha]\_2]\/2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[Rho]\_spread\)\ C\_1[b + s]\ C\_2[b]\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_\(\[Alpha]\_2\)\/Q)\) = \
+\(\(Q\^2\) Q\_\(\(\[Alpha]\_1\) \[Alpha]\_2\) - \(Q\_\(\[Alpha]\_2\)\) Q\_\(\
+\[Alpha]\_1\)\)\/Q\^3\)], "Input"],
+
+Cell[BoxData[
+    \(Summary\ using\ tangent\ vectors\)], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\(>\)\(\ \)\(\[PartialD]\/\[PartialD]s\)\) = \[PartialD]\/\
+\[PartialD]s\_1 + \(Q\_s\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\(>\)\(\ \)\(\[PartialD]\/\[PartialD]b\)\) = \[PartialD]\/\
+\[PartialD]b\_1 + \(Q\_b\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\(>\)\(\ \)\(\[PartialD]\/\[PartialD]\[Alpha]\_1\)\) = \
+\(Q\_1\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(=\)\(\(\(>\)\(\ \)\(\[PartialD]\/\[PartialD]\[Alpha]\_2\)\) = \
+\(Q\_2\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11 + \[PartialD]\/\[PartialD]\
+\[Alpha]\_22\)\)\)], "Input"],
+
+Cell[BoxData[""], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(So\ the\ equation\ rewrites\ \(\(as\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(-\[PartialD]\_t P\) \[Equal] 
+      1\/2\ \(A\_\(s\_1\^2\)\) \[PartialD]\^2 P\/\[PartialD]s\_1\^2 + \(A\_\(\
+\(\[Alpha]\_11\) 
+                s\_1\)\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]s\_1\) + \(A\_\(\[Alpha]\_11\^2\)\) \[PartialD]\^2 P\/\[PartialD]\
+\[Alpha]\_11\^2 + \(A\_\(\[Alpha]\_11\)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\), "\[IndentingNewLine]", 
+    \(with\ P[
+          0] = \((1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_1\^2\) C\_1[K + b]\^2 + 
+            1\/2\ \(\[Epsilon]\^2\) \(\[Alpha]\_2\^2\) 
+              C\_2[b]\^2 - \(\[Epsilon]\^2\) \[Rho]\_s\ \(\[Alpha]\_1\) \(\
+\[Alpha]\_2\) C\_1[K + b] C\_2[b])\) \[Delta][
+          s - K]\), "\[IndentingNewLine]", 
+    \(Then\ the\ value\ of\ the\ call\ spreadoption\ \(is\  : \ \
+\[IndentingNewLine]V[t\_tex, f\_1, 
+            f\_2, \[Alpha]\_1, \[Alpha]\_2]\) = \(\((f\_1 - f\_2 - 
+                K)\)\^+\) + \[Integral]\_0\%\(t\_tex\)\[DifferentialD]TP[t, 
+              s + b, b, \[Alpha]\_1, \[Alpha]\_2]\)}], "Input",
+  Background->RGBColor[0.454902, 0.847059, 0.878431]],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]s\^2 = \(\(\[PartialD]\/\[PartialD]s\) \((\
+\[PartialD]P\/\[PartialD]s\_1 + \(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) 
+                Q\_s\/Q)\) = \[IndentingNewLine]\(\(\[PartialD]\/\[PartialD]s\
+\) \((\[PartialD]P\/\[PartialD]s\_1)\) + \(\[PartialD]\/\[PartialD]s\) \((\
+\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) 
+              Q\_s\/Q + \(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) \(\
+\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) = \
+\[IndentingNewLine]\(\(\[PartialD]\/\[PartialD]s\_1\) \[PartialD]P\/\
+\[PartialD]s\_1 + \(Q\_s\/Q\) \(\[PartialD]\/\[PartialD]\[Alpha]\_11\) \
+\[PartialD]P\/\[PartialD]s\_1 + \(Q\_s\/Q\) \((\(\[PartialD]\/\[PartialD]s\_1\
+\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_s\/Q\) \(\[PartialD]\/\
+\[PartialD]\[Alpha]\_11\) \[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \(\
+\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 = \[IndentingNewLine]\[PartialD]\^2 P\/\
+\[PartialD]s\_1\^2 + 
+              2 \( Q\_s\/Q\) \[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\
+\[Alpha]\_11\) + \(\((Q\_s\/Q)\)\^2\) \[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2 + \((\(\[PartialD]\/\[PartialD]s\) \
+\((Q\_s\/Q)\))\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]b\^2 = \(\(\[PartialD]\/\[PartialD]b\) \((\
+\[PartialD]P\/\[PartialD]b\_1 + \(Q\_b\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\
+\_11)\) = \[IndentingNewLine]\(\(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]b\_1)\) + \(\[PartialD]\/\[PartialD]b\) \
+\((Q\_b\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_b\/Q\) \(\
+\[PartialD]\/\[PartialD]b\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \
+\[IndentingNewLine]\(\[PartialD]\^2 P\/\[PartialD]b\_1\^2 + \(Q\_b\/Q\) \
+\[PartialD]\^2 P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\) + \(\[PartialD]\
+\/\[PartialD]b\) \((Q\_b\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_b\
+\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\) + \
+\(Q\_b\/Q\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2)\) = \
+\[IndentingNewLine]\[PartialD]\^2 P\/\[PartialD]b\_1\^2 + 
+              2 \((Q\_b\/Q)\) \[PartialD]\^2 P\/\(\[PartialD]b\_1 \[PartialD]\
+\[Alpha]\_11\) + \(\((Q\_b\/Q)\)\^2\) \[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2 + \((\(\[PartialD]\/\[PartialD]b\) \
+\((Q\_b\/Q)\))\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 = \(\(Q\_1\/Q\) \(\
+\[PartialD]\/\[PartialD]\[Alpha]\_1\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_1\) \((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 = \(\((Q\_1\
+\/Q)\)\^2\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\
+\[PartialD]\[Alpha]\_1\) \((Q\_1\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 = \(\(\[PartialD]\/\
+\[PartialD]\[Alpha]\_2\) \((\(\[PartialD]P\/\[PartialD]\[Alpha]\_11\) 
+                Q\_2\/Q)\) + \[PartialD]P\/\[PartialD]\[Alpha]\_22 = \(\(Q\_2\
+\/Q\) \(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((\[PartialD]P\/\[PartialD]\
+\[Alpha]\_11)\) + \(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(\[PartialD]\/\[PartialD]\[Alpha]\_2\
+\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\) = \(\(Q\_2\/Q\) \((\(Q\_2\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11 + \
+\[PartialD]\/\[PartialD]\[Alpha]\_22)\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_2\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \((\(Q\_2\
+\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11 + \[PartialD]\/\[PartialD]\[Alpha]\
+\_22)\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\) = \
+\[IndentingNewLine]\(\((Q\_2\/Q)\)\^2\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\
+\_11\^2 + 
+              2 \( Q\_2\/Q\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\) + \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_22\^2 + \(\
+\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\
+\[Alpha]\_11\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\[PartialD]b)\) = \(\(\
+\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\[PartialD]b\_1 + \(\[PartialD]P\
+\/\[PartialD]\[Alpha]\_11\) 
+                Q\_b\/Q)\) = \(\((\[PartialD]\/\[PartialD]s\_1 + \(Q\_s\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11)\) \((\[PartialD]P\/\[PartialD]b\_1)\) + \
+\(Q\_b\/Q\) \((\[PartialD]\/\[PartialD]s\_1 + \(Q\_s\/Q\) \[PartialD]\/\
+\[PartialD]\[Alpha]\_11)\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \(\
+\[PartialD]\/\[PartialD]s\) \((Q\_b\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 = \[PartialD]\^2 P\/\(\[PartialD]s\_1 \
+\[PartialD]b\_1\) + \(Q\_s\/Q\) \((\[PartialD]\^2 \
+P\/\(\[PartialD]\[Alpha]\_11 \[PartialD]b\_1\))\) + \(Q\_b\/Q\) \
+\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\) + \(Q\_b\/Q\) \
+\(Q\_s\/Q\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\
+\[PartialD]s\) \((Q\_b\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_1)\) = \(\(\[PartialD]\/\[PartialD]s\) \
+\((\(Q\_1\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\(\[PartialD]\/\
+\[PartialD]s\) \((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \
+\(Q\_1\/Q\) \(\[PartialD]\/\[PartialD]s\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\(\[PartialD]\/\[PartialD]s\) \
+\((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_1\/Q\) \((\
+\[PartialD]\/\[PartialD]s\_1 + \(Q\_s\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11)\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\[PartialD]\/\[PartialD]s\) \
+\((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_1\/Q\) \((\
+\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \
+\(Q\_1\/Q\) \((Q\_s\/Q)\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]s\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_2)\) = \(\(\[PartialD]\/\[PartialD]s\) \
+\((\(Q\_2\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\) = \(\(\[PartialD]\/\[PartialD]s\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_2\/Q\) \
+\(\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \
+\(\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\) = \
+\(\(\[PartialD]\/\[PartialD]s\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\
+\[Alpha]\_11 + \(Q\_2\/Q\) \((\[PartialD]\/\[PartialD]s\_1 + \(Q\_s\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11)\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \((\[PartialD]\/\[PartialD]s\_1 \
++ \(Q\_s\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11)\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\) = \((\[PartialD]\^2 P\/\(\[PartialD]s\_1 \
+\[PartialD]\[Alpha]\_22\))\) + \(Q\_2\/Q\) \((\[PartialD]\^2 \
+P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \(Q\_s\/Q\) \
+\((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \[PartialD]\[Alpha]\_22\))\) + \
+\(Q\_2\/Q\) \(Q\_s\/Q\) \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2)\) + \
+\(\[PartialD]\/\[PartialD]s\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\
+\_11\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_1)\) = \(\(\[PartialD]\/\[PartialD]b\) \
+\((\(Q\_1\/Q\) \[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\(\[PartialD]\/\
+\[PartialD]b\) \((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \
+\(Q\_1\/Q\) \(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\(\[PartialD]\/\[PartialD]b\) \
+\((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_1\/Q\) \((\
+\[PartialD]\/\[PartialD]b\_1 + \(Q\_b\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11)\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) = \(\[PartialD]\/\[PartialD]b\) \
+\((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_1\/Q\) \((\
+\[PartialD]\^2 P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\))\) + \
+\(Q\_1\/Q\) \((Q\_b\/Q)\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \
+\((\[PartialD]P\/\[PartialD]b)\) = \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \
+\((\[PartialD]P\/\[PartialD]b\_1 + \(Q\_b\/Q\) \[PartialD]P\/\[PartialD]\
+\[Alpha]\_11)\) = \(Q\_1\/Q\) \[PartialD]P\/\(\[PartialD]b\_1 \[PartialD]\
+\[Alpha]\_11\) + \((Q\_b\/Q)\) \(Q\_1\/Q\) \[PartialD]\^2 P\/\[PartialD]\
+\[Alpha]\_11\^2 + \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_b\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_2)\) = \(\(\[PartialD]\/\[PartialD]b\) \
+\((\((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\) = \(\(\[PartialD]\/\[PartialD]b\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_2\/Q\) \
+\(\[PartialD]\/\[PartialD]b\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \
+\(\[PartialD]\/\[PartialD]b\) \((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\) = \
+\(\(\[PartialD]\/\[PartialD]b\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\
+\[Alpha]\_11 + \(Q\_2\/Q\) \((\[PartialD]\/\[PartialD]b\_1 + \(Q\_b\/Q\) \
+\[PartialD]\/\[PartialD]\[Alpha]\_11)\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\) + \((\[PartialD]\/\[PartialD]b\_1 \
++ \(Q\_b\/Q\) \[PartialD]\/\[PartialD]\[Alpha]\_11)\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\) = \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_22\))\) + \(Q\_2\/Q\) \((\[PartialD]\^2 \
+P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\))\) + \(Q\_2\/Q\) \(Q\_b\/Q\) \
+\((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2)\) + \(Q\_b\/Q\) \((\
+\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \[PartialD]\[Alpha]\_22\))\) + \(\
+\[PartialD]\/\[PartialD]b\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((\[PartialD]P\/\[PartialD]\
+\[Alpha]\_2)\) = \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((\(Q\_2\/Q\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11 + \
+\[PartialD]P\/\[PartialD]\[Alpha]\_22)\) = \(\(\[PartialD]\/\[PartialD]\
+\[Alpha]\_1\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11 + \(Q\_2\/Q\
+\) \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((\[PartialD]P\/\[PartialD]\
+\[Alpha]\_11)\) + \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\) = \(Q\_2\/Q\) \((Q\_1\/Q)\) \((\[PartialD]\^2 P\/\
+\[PartialD]\[Alpha]\_11\^2)\) + \((Q\_1\/Q)\) \((\[PartialD]\^2 P\/\(\
+\[PartialD]\[Alpha]\_11 \[PartialD]\[Alpha]\_22\))\) + \(\[PartialD]\/\
+\[PartialD]\[Alpha]\_1\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(In\ \(\(Summary\)\(:\)\(\[IndentingNewLine]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]s\^2 = \[PartialD]\^2 \
+P\/\[PartialD]s\_1\^2 + \(\((Q\_s\/Q)\)\^2\) \[PartialD]\^2 P\/\[PartialD]\
+\[Alpha]\_11\^2 + 
+        2 \( Q\_s\/Q\) \[PartialD]\^2 P\/\(\[PartialD]s\_1 \
+\[PartialD]\[Alpha]\_11\) + \(\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\[PartialD]b\^2\), "=", 
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 P\/\[PartialD]b\_1\^2\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\((Q\_b\/Q)\)\^2\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\
+\^2\), "+", 
+        StyleBox[\(2 \( Q\_b\/Q\) \[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\[PartialD]\/\[PartialD]b\) \((Q\_b\/Q)\) \[PartialD]P\/\
+\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2\), "=", 
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_22\^2\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 
+          0]], \(\(\((Q\_2\/Q)\)\^2\) \[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2\), "+", 
+        StyleBox[\(2 \( Q\_2\/Q\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 = \(\((Q\_1\/Q)\)\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_1\) \((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]b\)\), "=", 
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]b\_1\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(Q\_b\/Q\) \[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\
+\[Alpha]\_11\)\), 
+        "+", \(\(\(\(Q\_b\) 
+                Q\_s\)\/Q\^2\) \[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2\),
+         "+", 
+        StyleBox[\(\(Q\_s\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]b\_1\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\[PartialD]\/\[PartialD]s\) \((Q\_b\/Q)\) \[PartialD]P\/\
+\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\[Alpha]\_2\)\), 
+      "=", 
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(Q\_2\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\
+\[Alpha]\_11\))\)\), 
+        "+", \(\(\(\(Q\_2\) 
+                Q\_s\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\), "+", 
+        StyleBox[\(\(Q\_s\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 
+          0]], \(\(\[PartialD]\/\[PartialD]s\) \((Q\_2\/Q)\) \[PartialD]P\/\
+\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\[Alpha]\_2\)\), 
+      "=", 
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], "+", 
+        StyleBox[\(\(Q\_2\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\(\(Q\_2\) 
+                Q\_b\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\), 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[\(\(Q\_b\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 
+          0]], \(\(\[PartialD]\/\[PartialD]b\) \((Q\_2\/Q)\) \[PartialD]P\/\
+\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\[Alpha]\_1\) = \(Q\_1\/Q\) \
+\((\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \(\(\(Q\
+\_1\) Q\_s\)\/Q\^2\) \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2)\) + \(\
+\[PartialD]\/\[PartialD]s\) \((Q\_1\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\[Alpha]\_1\)\), 
+      "=", 
+      RowBox[{
+        StyleBox[\(\(Q\_1\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        "+", \(\(\(\(Q\_1\) 
+                Q\_b\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\), 
+        "+", \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_b\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\^2 
+            P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\[Alpha]\_2\)\), "=", 
+      RowBox[{
+        StyleBox[\(\(Q\_1\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\))\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 
+          0]], \(\(\(\(Q\_2\) 
+                Q\_1\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\)\), 
+        "+", \(\(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_2\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(If\ we\ remove\ the\ unused\ \(\(derivatives\)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]s\^2 = \[PartialD]\^2 \
+P\/\[PartialD]s\_1\^2 + \(\((Q\_s\/Q)\)\^2\) \[PartialD]\^2 P\/\[PartialD]\
+\[Alpha]\_11\^2 + 
+        2 \( Q\_s\/Q\) \[PartialD]\^2 P\/\(\[PartialD]s\_1 \
+\[PartialD]\[Alpha]\_11\) + \(\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]b\^2 = \(\((Q\_b\/Q)\)\^2\) \[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\[PartialD]b\) \((Q\_b\/Q)\) \
+\[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 = \(\((Q\_1\/Q)\)\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_1\) \((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 = \(\((Q\_2\/Q)\)\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_11\^2 + \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_2\) \((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]b\) = \(\(\(Q\_b\) 
+                Q\_s\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(Q\_b\/Q\) \((\[PartialD]\^2 P\/\(\
+\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \(\[PartialD]\/\[PartialD]s\) \
+\((Q\_b\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\[Alpha]\_1\) = \
+\(\(\(Q\_1\) 
+                Q\_s\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(Q\_1\/Q\) \((\[PartialD]\^2 P\/\(\
+\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \(\[PartialD]\/\[PartialD]s\) \
+\((Q\_1\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\[Alpha]\_2\) = \
+\(\(\(Q\_2\) 
+                Q\_s\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(Q\_2\/Q\) \((\[PartialD]\^2 P\/\(\
+\[PartialD]s\_1 \[PartialD]\[Alpha]\_11\))\) + \(\[PartialD]\/\[PartialD]s\) \
+\((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\[Alpha]\_2\) = \
+\(\(\(Q\_2\) 
+                Q\_b\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(\[PartialD]\/\[PartialD]b\) \
+\((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\[Alpha]\_1\) = \
+\(\(\(Q\_1\) 
+                Q\_b\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \
+\((Q\_b\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\[Alpha]\_2\) = \
+\(\(\(Q\_2\) 
+                Q\_1\)\/Q\^2\) \((\[PartialD]\^2 \
+P\/\[PartialD]\[Alpha]\_11\^2)\) + \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \
+\((Q\_2\/Q)\) \[PartialD]P\/\[PartialD]\[Alpha]\_11\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[PartialD]\_t P\) \[Equal] 
+      1\/2\ \(\[Epsilon]\^2\) \((\ 
+            Q\^2)\) \[PartialD]\^2 P\/\[PartialD]s\^2 + 
+        1\/2\ \[Epsilon]\^2\ \[Alpha]\_2\^2\ \(C\_2[
+                b]\^2\) \[PartialD]\^2 P\/\[PartialD]b\^2 + \(\[Epsilon]\^2\) \
+\[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]s\) + \
+\[InvisibleSpace]\(\[Epsilon]\^2\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \((\ \
+\[Rho]\_1\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]s\) + \[Epsilon]\^2\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                  b])\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]s\) + \[Epsilon]\^2\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \
+\(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            b] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]b\))\) + \[Epsilon]\^2\ \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \
+\(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            b] \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]b\))\) + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2 + 
+        1\/2\ \[Epsilon]\^2\ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \
+\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2 + \(\[Epsilon]\^2\) \(\[Rho]\_v\) \
+\(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \[PartialD]\^2 \
+P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]\[Alpha]\_2\)\)], "Input"],
+
+Cell[BoxData[
+    \(can\ be\ rewrited\ \(\(as\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(that\ we\ rewrite\ \(\(as\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\[PartialD]\_t P\) \[Equal] 
+      1\/2\ \(A\_\(s\_1\^2\)\) \[PartialD]\^2 P\/\[PartialD]s\_1\^2 + \(A\_\(\
+\(\[Alpha]\_11\) 
+                s\_1\)\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]s\_1\) + \(A\_\(\[Alpha]\_11\^2\)\) \[PartialD]\^2 P\/\[PartialD]\
+\[Alpha]\_11\^2 + \(A\_\(\[Alpha]\_11\)\) \(\(\[PartialD]P\/\[PartialD]\
+\[Alpha]\_11\)\(\[Cross]\)\)\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[BoxData[
+    \(\(\(with\)\(\ \)\)\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[BoxData[
+    \(A\_\(s\_1\^2\) = 1\/2\ \(\[Epsilon]\^2\) \((\ Q\^2)\)\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[BoxData[
+    \(A\_\(\(\[Alpha]\_11\) s\_1\) = 
+      Q\ Q\_s + \[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[b])\) 
+          Q\_b\/Q + \(\[Nu]\_1\) \(\[Alpha]\_1\) \((\ \[Rho]\_1\ \(\(\[Alpha]\
+\)\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) Q\_1\/Q + \ \(\[Nu]\_2\) \(\[Alpha]\_2\) \
+\((\[Rho]\_c12\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[b])\) 
+          Q\_2\/Q\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[BoxData[
+    \(A\_\(\[Alpha]\_11\^2\) = \(1\/2\) \((\(\((Q\_s\/Q)\)\^2\) Q\^2)\) + 
+        1\/2\ \ \[Alpha]\_2\^2\ \(C\_2[b]\^2\) \((Q\_b\/Q)\)\^2 + 
+        1\/2\ \ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \((Q\_1\/Q)\)\^2 + 
+        1\/2\ \ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \((Q\_2\/Q)\)\^2 + \
+\(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \(\(Q\
+\_2\) Q\_1\)\/Q\^2 + \[IndentingNewLine]\[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[
+                  b])\) \(\(Q\_b\) Q\_s\)\/Q\^2 + \[InvisibleSpace]\(\[Nu]\_1\
+\) \(\[Alpha]\_1\) \((\ \[Rho]\_1\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) \(\(Q\_1\) Q\_s\)\/Q\^2 + \[IndentingNewLine]\ \
+\(\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                  b])\) \(\(Q\_2\) Q\_s\)\/Q\^2 + \ \[Rho]\_c21\ \(\[Nu]\_1\) \
+\(\[Alpha]\_1\) \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+            b] \(\(Q\_1\) Q\_b\)\/Q\^2 + \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \
+\)\)\_2\) \(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            b] \(\(Q\_2\) Q\_b\)\/Q\^2\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[
+      1\/2\ \ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \((Q\_1)\)\^2 + 
+        1\/2\ \ \(\[Nu]\_2\^2\) \(\[Alpha]\_2\^2\) \((Q\_2)\)\^2 + \
+\(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \
+\(Q\_2\) Q\_1 + 
+        1\/2\ \ \[Alpha]\_2\^2\ \(C\_2[
+                b]\^2\) \((Q\_b)\)\^2 + \[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[b])\) \(Q\_b\) 
+          Q\_s + \[InvisibleSpace]\(\[Nu]\_1\) \(\[Alpha]\_1\) \((\ \[Rho]\_1\
+\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) \(Q\_1\) 
+          Q\_s + \ \(\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                  b])\) \(Q\_2\) 
+          Q\_s + \ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\(\[Alpha]\)\(\
+\ \)\)\_2\ C\_2[b] \(Q\_1\) 
+          Q\_b + \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \(\[Nu]\_2\) \
+\[Alpha]\_2\ C\_2[b] \(Q\_2\) Q\_b]\)], "Input"],
+
+Cell[BoxData[
+    \(1\/2\ \((Q\_1\%2\ \[Alpha]\_1\%2\ \[Nu]\_1\%2 + 
+          2\ Q\_1\ \[Alpha]\_1\ \[Nu]\_1\ \((Q\_2\ \[Alpha]\_2\ \[Nu]\_2\ \
+\[Rho]\_v + Q\_b\ \[Alpha]\_2\ \[Rho]\_c21\ C\_2[b] + 
+                Q\_s\ \((\[Alpha]\_1\ \[Rho]\_1\ C\_1[
+                          b + s] - \[Alpha]\_2\ \[Rho]\_c21\ C\_2[
+                          b])\))\) + \[Alpha]\_2\ \((Q\_2\%2\ \[Alpha]\_2\ \
+\[Nu]\_2\%2 + Q\_b\ C\_2[
+                    b]\ \((Q\_b\ \[Alpha]\_2\ C\_2[b] + 
+                      2\ Q\_s\ \((\[Alpha]\_1\ \[Rho]\_s\ C\_1[
+                                b + s] - \[Alpha]\_2\ C\_2[b])\))\) + 
+                2\ Q\_2\ \[Nu]\_2\ \((Q\_b\ \[Alpha]\_2\ \[Rho]\_2\ C\_2[b] + 
+                      Q\_s\ \((\[Alpha]\_1\ \[Rho]\_c12\ C\_1[
+                                b + s] - \[Alpha]\_2\ \[Rho]\_2\ C\_2[
+                                b])\))\))\))\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(A\_\(\[Alpha]\_11\) = 
+      1\/2\ \((\ Q\^2)\) \(\[PartialD]\/\[PartialD]s\) \((Q\_s\/Q)\) + 
+        1\/2\ \ \[Alpha]\_2\^2\ \(C\_2[
+                b]\^2\) \(\[PartialD]\/\[PartialD]b\) \((Q\_b\/Q)\) + \
+\[Alpha]\_2\ C\_2[
+            b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[
+                  b])\) \(\[PartialD]\/\[PartialD]s\) \((Q\_b\/Q)\) + \
+\[IndentingNewLine]\[InvisibleSpace]\(\[Nu]\_1\) \(\[Alpha]\_1\) \((\ \
+\[Rho]\_1\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_c21\ \(\(\[Alpha]\)\(\ \)\)\_2\ C\_2[
+                  b])\) \(\[PartialD]\/\[PartialD]s\) \((Q\_1\/Q)\) + \ \(\
+\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[
+                  s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                  b])\) \(\[PartialD]\/\[PartialD]s\) \((Q\_2\/Q)\) + \
+\[IndentingNewLine]\ \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\(\[Alpha]\)\
+\(\ \)\)\_2\ C\_2[
+            b] \(\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_b\/Q)\) + \ \
+\[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \(\[Nu]\_2\) \[Alpha]\_2\ C\_2[
+            b] \(\[PartialD]\/\[PartialD]b\) \((Q\_2\/Q)\) + 
+        1\/2\ \ \(\[Nu]\_1\^2\) \(\[Alpha]\_1\^2\) \(\[PartialD]\/\[PartialD]\
+\[Alpha]\_1\) \((Q\_1\/Q)\) + \[IndentingNewLine]1\/2\ \ \(\[Nu]\_2\^2\) \(\
+\[Alpha]\_2\^2\) \(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((Q\_2\/Q)\) + \
+\((\(\[Rho]\_v\) \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\[Nu]\_2\) \(\[Alpha]\_2\) \(\
+\[PartialD]\/\[PartialD]\[Alpha]\_1\) \((Q\_2\/Q)\))\)\^2\)], "Input",
+  Background->RGBColor[0.54902, 0.776471, 0.941176]],
+
+Cell[BoxData[
+    \(To\ use\ the\ extended\ SABR\ Formula\ we\ just\ have\ to\ \(specify : \
+\[IndentingNewLine]C[
+            s]\) = \@\((\(\[Alpha]\_1\^2\) C\_1[s + F\_2]\^2\( + \^2\)\(\
+\[Alpha]\_2\^2\) C\_2[F\_2]\^2 - 2  \[Rho]\_s\ \(\[Alpha]\_1\) \
+\(\[Alpha]\_2\) C\_1[s + F\_2] C\_2[F\_2])\)\/\@\((\(\[Alpha]\_1\^2\) \
+C\_1[F\_1]\^2\( + \^2\)\(\[Alpha]\_2\^2\) C\_2[F\_2]\^2 - 2  \[Rho]\_s\ \(\
+\[Alpha]\_1\) \(\[Alpha]\_2\) C\_1[F\_1] C\_2[F\_2])\)\)], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          RowBox[{
+            SuperscriptBox["C", "\[Prime]",
+              MultilineFunction->None], "[", "s", "]"}], "=", "  ", 
+          RowBox[{\(Q\_s[s, F\_2]\/Q\), "=", 
+            FractionBox[
+              RowBox[{
+                RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[F\_2 + s]\), " ", 
+                  RowBox[{
+                    SuperscriptBox[\(C\_1\), "\[Prime]",
+                      MultilineFunction->None], "[", \(F\_2 + s\), "]"}]}], 
+                "-", 
+                
+                RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+                  " ", \(\[Rho]\_spread\), " ", \(C\_2[F\_2]\), " ", 
+                  RowBox[{
+                    SuperscriptBox[\(C\_1\), "\[Prime]",
+                      MultilineFunction->None], "[", \(F\_2 + s\), 
+                    "]"}]}]}], \(\@\((\(\[Alpha]\_1\^2\) 
+                        C\_1[F\_1]\^2\( + \^2\)\(\[Alpha]\_2\^2\) 
+                        C\_2[F\_2]\^2 - 
+                      2  \[Rho]\_s\ \(\[Alpha]\_1\) \(\[Alpha]\_2\) 
+                        C\_1[F\_1] C\_2[F\_2])\)\)]}]}], " ", ";"}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        RowBox[{
+          SuperscriptBox["C", "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "s", "]"}], "=", 
+        FractionBox[
+          RowBox[{"(", " ", 
+            RowBox[{
+              RowBox[{\(\[Alpha]\_1\%2\), " ", 
+                SuperscriptBox[
+                  RowBox[{
+                    SuperscriptBox[\(C\_1\), "\[Prime]",
+                      MultilineFunction->None], "[", \(F\_2 + s\), "]"}], 
+                  "2"]}], "+", 
+              RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[F\_2 + s]\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                    MultilineFunction->None], "[", \(F\_2 + s\), "]"}]}], "-",
+               
+              
+              RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+                " ", \(\[Rho]\_s\), " ", \(C\_2[F\_2]\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                    MultilineFunction->None], "[", \(F\_2 + s\), "]"}]}]}], 
+            " ", ")"}], \(\@\((\(\[Alpha]\_1\^2\) 
+                    C\_1[F\_1]\^2\( + \^2\)\(\[Alpha]\_2\^2\) C\_2[F\_2]\^2 - 
+                  2  \[Rho]\_s\ \(\[Alpha]\_1\) \(\[Alpha]\_2\) C\_1[F\_1] 
+                    C\_2[F\_2])\)\)]}], ";"}]], "Input"],
+
+Cell[BoxData[
+    \(the\ vol\ of\ the\ spead\ is\ scaled\ by\ is\ scaled\ by\ \@\((\(\
+\[Alpha]\_1\^2\) C\_1[F\_1]\^2\( + \^2\)\(\[Alpha]\_2\^2\) C\_2[F\_2]\^2 - 2  \
+\[Rho]\_s\ \(\[Alpha]\_1\) \(\[Alpha]\_2\) C\_1[F\_1] C\_2[F\_2])\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(Neglected\ Terms\)], "Input",
+  TextAlignment->Center,
+  Background->RGBColor[0.74902, 0.27451, 0.25098]],
+
+Cell[BoxData[
+    \(the\ terms\ we\ neglect\ \(\(are\)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{"N", "=", 
+      RowBox[{
+        RowBox[{\(1\/2\), "  ", \(\[Alpha]\_2\^2\), " ", \(C\_2[b]\^2\), 
+          RowBox[{"{", 
+            RowBox[{
+              StyleBox[\(\[PartialD]\^2 P\/\[PartialD]b\_1\^2\),
+                FontColor->RGBColor[1, 0, 0]], "+", 
+              
+              StyleBox[\(2 \( Q\_b\/Q\) \[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\)\),
+                FontColor->RGBColor[1, 0, 0]]}], "}"}]}], "+", 
+        RowBox[{\(\[Alpha]\_2\), 
+          " ", \(C\_2[
+            b]\), \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                  s + b] - \ \ \[Alpha]\_2\ C\_2[b])\), 
+          RowBox[{"{", 
+            RowBox[{
+              
+              StyleBox[\(\[PartialD]\^2 
+                      P\/\(\[PartialD]s\_1 \[PartialD]b\_1\)\),
+                FontColor->RGBColor[1, 0, 0]], "+", 
+              
+              StyleBox[\(\(Q\_s\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\
+\[Alpha]\_11 \[PartialD]b\_1\))\)\),
+                FontColor->RGBColor[1, 0, 0]]}], "}"}]}], "+", 
+        RowBox[{\(\[Nu]\_2\), \(\[Alpha]\_2\), \((\[Rho]\_c12\ \(\(\[Alpha]\)\
+\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[b])\), 
+          RowBox[{"{", 
+            RowBox[{
+              
+              StyleBox[\(\[PartialD]\^2 
+                      P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_22\)\),
+                FontColor->RGBColor[1, 0, 0]], "+", 
+              
+              StyleBox[\(\(Q\_s\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\
+\[Alpha]\_11 \[PartialD]\[Alpha]\_22\))\)\),
+                FontColor->RGBColor[1, 0, 0]]}], "}"}]}], "+", " ", 
+        RowBox[{\(\[Rho]\_c21\), 
+          " ", \(\[Nu]\_1\), \(\[Alpha]\_1\), \(\(\(\[Alpha]\)\(\ \)\)\_2\), 
+          " ", \(C\_2[b]\), 
+          RowBox[{"{", 
+            
+            StyleBox[\(\(Q\_1\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\))\)\),
+              FontColor->RGBColor[1, 0, 0]], "}"}]}], "+", " ", 
+        RowBox[{\(\[Rho]\_2\), 
+          " ", \(\(\(\[Alpha]\)\(\ \)\)\_2\), \(\[Nu]\_2\), \(\[Alpha]\_2\), 
+          " ", \(C\_2[b]\), 
+          RowBox[{"{", 
+            RowBox[{
+              
+              StyleBox[\(\[PartialD]\^2 
+                      P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_22\)\),
+                FontColor->RGBColor[1, 0, 0]], "+", 
+              
+              StyleBox[\(\(Q\_2\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]b\_1 \
+\[PartialD]\[Alpha]\_11\))\)\),
+                FontColor->RGBColor[1, 0, 0]], "+", 
+              
+              StyleBox[\(\(Q\_b\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\
+\[Alpha]\_11 \[PartialD]\[Alpha]\_22\))\)\),
+                FontColor->RGBColor[1, 0, 0]]}], "}"}]}], "+", 
+        RowBox[{\(1\/2\), " ", \(\[Nu]\_2\^2\), \(\[Alpha]\_2\^2\), 
+          RowBox[{"{", 
+            
+            StyleBox[\(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_22\^2 + 
+                2 \( Q\_2\/Q\) \[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_11 \
+\[PartialD]\[Alpha]\_22\)\),
+              FontColor->RGBColor[1, 0, 0]], "}"}]}], "+", 
+        RowBox[{\(\[Rho]\_v\), \(\[Nu]\_1\), \(\[Alpha]\_1\), \(\[Nu]\_2\), \
+\(\[Alpha]\_2\), 
+          RowBox[{"{", 
+            
+            StyleBox[\(\(Q\_1\/Q\) \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\
+\_11 \[PartialD]\[Alpha]\_22\))\)\),
+              FontColor->RGBColor[1, 0, 0]], "}"}]}]}]}]], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(that\ we\ \(\(rewrite\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{"N", "=", 
+      RowBox[{
+        RowBox[{\({1\/2\ \ \[Alpha]\_2\^2\ C\_2[b]\^2}\), 
+          StyleBox[\(\[PartialD]\^2 P\/\[PartialD]b\_1\^2\),
+            FontColor->RGBColor[1, 0, 0]]}], "+", 
+        RowBox[{\({1\/2\ \ \(\[Nu]\_2\^2\) \[Alpha]\_2\^2}\), 
+          StyleBox[\(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_22\^2\),
+            FontColor->RGBColor[1, 0, 0]]}], 
+        StyleBox["+",
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[IndentingNewLine]",
+          FontColor->RGBColor[1, 0, 0]], 
+        RowBox[{\({1\/2\ \[Alpha]\_2\^2\ \(C\_2[b]\^2\) 2 
+                 Q\_b\/Q + \[Alpha]\_2\ C\_2[
+                  b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                        s + b] - \ \ \[Alpha]\_2\ C\_2[b])\) 
+                Q\_s\/Q + \[Rho]\_c21\ \(\[Nu]\_1\) \(\[Alpha]\_1\) \(\(\
+\[Alpha]\)\(\ \)\)\_2\ C\_2[b] 
+                Q\_1\/Q + \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \(\[Nu]\_2\
+\) \[Alpha]\_2\ C\_2[b] Q\_2\/Q}\), 
+          
+          StyleBox[\(\[PartialD]\^2 
+                  P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\)\),
+            FontColor->RGBColor[1, 0, 0]]}], "+", 
+        RowBox[{\({\[Alpha]\_2\ C\_2[
+                b] \((\ \(\[Rho]\_s\) \[Alpha]\_1\ C\_1[
+                      s + b] - \ \ \[Alpha]\_2\ C\_2[b])\)}\), 
+          StyleBox[\(\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]b\_1\)\),
+            FontColor->RGBColor[1, 0, 0]]}], "+", 
+        RowBox[{\({\ \(\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \
+\(\(\[Alpha]\)\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[
+                      b])\)}\), 
+          
+          StyleBox[\(\[PartialD]\^2 
+                  P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_22\)\),
+            FontColor->RGBColor[1, 0, 0]]}], "+", 
+        RowBox[{
+          RowBox[{"{", " ", 
+            
+            RowBox[{\(\(\[Nu]\_2\) \(\[Alpha]\_2\) \((\[Rho]\_c12\ \(\(\
+\[Alpha]\)\(\ \)\)\_1\ C\_1[s + b] - \ \[Rho]\_2\ \[Alpha]\_2\ C\_2[b])\) 
+                Q\_s\/Q\), "+", 
+              StyleBox[" ",
+                FontColor->GrayLevel[0]], 
+              RowBox[{
+                StyleBox[\(\[Rho]\_2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[" ",
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\(\(\[Alpha]\)\(\ \)\)\_2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Nu]\_2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Alpha]\_2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[" ",
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(C\_2[b]\),
+                  FontColor->GrayLevel[0]], \(Q\_b\/Q\)}], "+", 
+              RowBox[{
+                StyleBox[\(1\/2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox["  ",
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Nu]\_2\^2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Alpha]\_2\^2\),
+                  FontColor->GrayLevel[0]], "2", \(Q\_2\/Q\)}], "+", 
+              RowBox[{
+                StyleBox[\(\[Rho]\_v\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Nu]\_1\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Alpha]\_1\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Nu]\_2\),
+                  FontColor->GrayLevel[0]], 
+                StyleBox[\(\[Alpha]\_2\),
+                  FontColor->GrayLevel[0]], \(Q\_1\/Q\)}]}], "}"}], 
+          
+          StyleBox[\(\[PartialD]\^2 
+                  P\/\(\[PartialD]\[Alpha]\_11 \[PartialD]\[Alpha]\_22\)\),
+            FontColor->RGBColor[1, 0, 0]]}], "+", "\[IndentingNewLine]", 
+        RowBox[{\({\ \[Rho]\_2\ \(\(\(\[Alpha]\)\(\ \)\)\_2\) \(\[Nu]\_2\) \
+\[Alpha]\_2\ C\_2[b]}\), 
+          
+          StyleBox[\(\[PartialD]\^2 
+                  P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_22\)\),
+            FontColor->RGBColor[1, 0, 0]]}]}]}]], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(We\ need\ to\ compute\ inverse\ transformation\)], "Input"],
+
+Cell[BoxData[
+    \(The\ inverse\ transformation\ can\ be\ written\ \(\(as\)\(\ \
+\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(Condition\ \  : \ \[Alpha]\_11\^2 - \((1 - \[Rho]\_s\^2)\) \[Alpha]\_22\
+\^2\ C\_2[b\_1]\^2 > 0\)], "Input"],
+
+Cell[BoxData[
+    \(s = s\_1\)], "Input"],
+
+Cell[BoxData[
+    \(b = b\_1\)], "Input"],
+
+Cell[BoxData[
+    \(\[Alpha]\_1 = \ \(\(\[Rho]\_s\) \[Alpha]\_22\ C\_2[b\_1] + \@\(\[Alpha]\
+\_11\^2 - \((1 - \[Rho]\_s\^2)\) \[Alpha]\_22\^2\ \
+C\_2[b\_1]\^2\)\)\/C\_1[s\_1 + b\_1]\)], "Input"],
+
+Cell[BoxData[
+    \(\[Alpha]\_2 = \[Alpha]\_22\)], "Input"],
+
+Cell[BoxData[
+    \(so\ the\ following\ identity\ will\ be\ useful\ later\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\ \)\(\@\(\[Alpha]\_11\^2 - \((1 - \[Rho]\_s\^2)\) \[Alpha]\_22\^2\ \
+C\_2[b\_1]\^2\) = \(\[Alpha]\_1\) 
+          C\_1[s\_1 + b\_1] - \(\[Rho]\_s\) \[Alpha]\_22\ C\_2[
+            b\_1]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(we\ \(\(need\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\), "=", 
+      RowBox[{
+        RowBox[{"-", 
+          FractionBox[
+            
+            RowBox[{\((\[Alpha]\_22\ \[Rho]\_s\ C\_2[
+                      b\_1] + \@\(\[Alpha]\_11\%2 - \[Alpha]\_22\%2\ \((1 - \
+\[Rho]\_s\%2)\)\ C\_2[b\_1]\^2\))\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b\_1 + s\_1\), 
+                "]"}]}], \(C\_1[b\_1 + s\_1]\^2\)]}], "=", 
+        RowBox[{\(-\[Alpha]\_1\), 
+          FractionBox[
+            RowBox[{
+              SuperscriptBox[\(C\_1\), "\[Prime]",
+                MultilineFunction->None], "[", \(b + s\), "]"}], \(C\_1[
+              b + s]\)]}]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\), "=", 
+      RowBox[{
+        RowBox[{
+          RowBox[{"-", 
+            FractionBox[
+              
+              RowBox[{\((\[Alpha]\_22\ \[Rho]\_s\ C\_2[
+                        b\_1] + \@\(\[Alpha]\_11\%2 - \[Alpha]\_22\%2\ \((1 - \
+\[Rho]\_s\%2)\)\ C\_2[b\_1]\^2\))\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_1\), "\[Prime]",
+                    MultilineFunction->None], "[", \(b\_1 + s\_1\), 
+                  "]"}]}], \(C\_1[b\_1 + s\_1]\^2\)]}], "+", 
+          FractionBox[
+            RowBox[{
+              RowBox[{\(\[Alpha]\_22\), " ", \(\[Rho]\_s\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_2\), "\[Prime]",
+                    MultilineFunction->None], "[", \(b\_1\), "]"}]}], "-", 
+              FractionBox[
+                
+                RowBox[{\(\[Alpha]\_22\%2\), " ", \((1 - \[Rho]\_s\%2)\), 
+                  " ", \(C\_2[b\_1]\), " ", 
+                  RowBox[{
+                    SuperscriptBox[\(C\_2\), "\[Prime]",
+                      MultilineFunction->None], "[", \(b\_1\), 
+                    "]"}]}], \(\@\(\[Alpha]\_11\%2 - \[Alpha]\_22\%2\ \((1 - \
+\[Rho]\_s\%2)\)\ C\_2[b\_1]\^2\)\)]}], \(C\_1[b\_1 + s\_1]\)]}], "=", 
+        FractionBox[
+          RowBox[{
+            RowBox[{\(-\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+            RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), " ", \(\[Rho]\_s\),
+               " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(C\_2[b]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}]}], 
+                  "+", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}]}], 
+                ")"}]}]}], \(C\_1[
+              b + s]\ \((\[Alpha]\_1\ C\_1[
+                    b + s] - \[Alpha]\_2\ \[Rho]\_s\ C\_2[
+                    b])\)\)]}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11 = \
+\(\[Alpha]\_11\/\(C\_1[b\_1 + s\_1]\ \@\(\[Alpha]\_11\%2 - \[Alpha]\_22\%2\ \
+\((1 - \[Rho]\_s\%2)\)\ C\_2[b\_1]\^2\)\) = \@\(\[Alpha]\_1\^2\ C\_1[s + \
+b]\^2 + \ \[Alpha]\_2\^2\ C\_2[b]\^2 - 2\ \(\[Rho]\_s\) \(\[Alpha]\_1\) \
+\[Alpha]\_2\ C\_1[s + b]\ C\_2[b]\)\/\(C\_1[b + s]\ \((\(\[Alpha]\_1\) C\_1[s \
++ b] - \(\[Rho]\_s\) \[Alpha]\_22\ C\_2[b])\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22 = \(\(\[Rho]\_s\ C\_2[b\
+\_1] - \(\[Alpha]\_22\ \((1 - \[Rho]\_s\%2)\)\ \
+C\_2[b\_1]\^2\)\/\@\(\[Alpha]\_11\%2 - \[Alpha]\_22\%2\ \((1 - \
+\[Rho]\_s\%2)\)\ C\_2[b\_1]\^2\)\)\/C\_1[b\_1 + s\_1] = \(\(\[Rho]\_s\ \
+C\_2[b] - \(\[Alpha]\_2\ \((1 - \[Rho]\_s\%2)\)\ \
+C\_2[b]\^2\)\/\((\(\[Alpha]\_1\) C\_1[s + b] - \(\[Rho]\_s\) \[Alpha]\_2\ \
+C\_2[b])\)\)\/C\_1[b + s] = \(C\_2[b]\ \((\[Alpha]\_1\ \[Rho]\_s\ C\_1[b + s] \
+- \[Alpha]\_2\ C\_2[b])\)\)\/\(C\_1[b + s]\ \((\[Alpha]\_1\ C\_1[b + s] - \
+\[Alpha]\_2\ \[Rho]\_s\ C\_2[b])\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(We\ need\ the\ following\ second\ \(\(derivatives\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]b\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      RowBox[{\(1\/\(C\_1[b + s]\^2\ \((\[Alpha]\_1\ C\_1[b + s] - \
+\[Alpha]\_2\ \[Rho]\_s\ C\_2[b])\)\^2\)\), 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{\(\[Alpha]\_1\%3\), " ", \(C\_1[b + s]\^2\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}], "2"],
+                   "-", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}]}]}], 
+                ")"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_2\%3\), " ", \(\[Rho]\_s\), 
+              " ", \(C\_2[b]\^2\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    RowBox[{"-", 
+                      RowBox[{
+                        SuperscriptBox[\(C\_1\), "\[Prime]",
+                          MultilineFunction->None], "[", \(b + s\), "]"}]}], 
+                    " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}], "+", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}]}], 
+                ")"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\%2\), " ", \(\[Alpha]\_2\), 
+              " ", \(\[Rho]\_s\), " ", \(C\_1[b + s]\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(-2\), " ", \(C\_2[b]\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        SuperscriptBox[
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), "]"}],
+                           "2"], "-", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}]}], ")"}]}], "+", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{
+                          RowBox[{"-", 
+                            RowBox[{
+                              SuperscriptBox[\(C\_1\), "\[Prime]",
+                                MultilineFunction->None], "[", \(b + s\), 
+                              "]"}]}], " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}], 
+                        "+", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}]}], ")"}]}], "+", 
+            RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\%2\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(\[Rho]\_s\%2\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{\(C\_1[b + s]\^2\), " ", 
+                          SuperscriptBox[
+                            RowBox[{
+                              SuperscriptBox[\(C\_2\), "\[Prime]",
+                                MultilineFunction->None], "[", "b", "]"}], 
+                            "2"]}], "+", 
+                        RowBox[{\(C\_2[b]\^2\), " ", 
+                          RowBox[{"(", 
+                            RowBox[{
+                              SuperscriptBox[
+                                RowBox[{
+                                  SuperscriptBox[\(C\_1\), "\[Prime]",
+                                    MultilineFunction->None], "[", \(b + s\), 
+                                  "]"}], "2"], "-", 
+                              RowBox[{\(C\_1[b + s]\), " ", 
+                                RowBox[{
+                                  
+                                  SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                                    
+                                    MultilineFunction->None], "[", \(b + s\), 
+                                  "]"}]}]}], ")"}]}], "-", 
+                        RowBox[{\(C\_1[b + s]\^2\), " ", \(C\_2[b]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}], "-", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          SuperscriptBox[
+                            RowBox[{
+                              SuperscriptBox[\(C\_2\), "\[Prime]",
+                                MultilineFunction->None], "[", "b", "]"}], 
+                            "2"]}], "+", 
+                        RowBox[{\(C\_2[b]\), " ", 
+                          RowBox[{"(", 
+                            RowBox[{
+                              RowBox[{\(-2\), " ", 
+                                RowBox[{
+                                  SuperscriptBox[\(C\_1\), "\[Prime]",
+                                    MultilineFunction->None], "[", \(b + s\), 
+                                  "]"}], " ", 
+                                RowBox[{
+                                  SuperscriptBox[\(C\_2\), "\[Prime]",
+                                    MultilineFunction->None], "[", "b", 
+                                  "]"}]}], "+", 
+                              RowBox[{\(C\_1[b + s]\), " ", 
+                                RowBox[{
+                                  
+                                  SuperscriptBox[\(C\_2\), "\[Prime]\[Prime]",
+                                    
+                                    MultilineFunction->None], "[", "b", 
+                                  "]"}]}]}], ")"}]}]}], ")"}]}]}], ")"}]}]}], 
+          ")"}]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      RowBox[{"-", 
+        FractionBox[
+          RowBox[{
+            RowBox[{\(\[Alpha]\_1\%2\), " ", \(C\_1[b + s]\^2\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "-", 
+            RowBox[{
+            "2", " ", \(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+              " ", \(\[Rho]\_s\), " ", \(C\_1[b + s]\), " ", \(C\_2[b]\), " ",
+               
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "+", 
+            RowBox[{\(\[Alpha]\_2\%2\), " ", \(C\_2[b]\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(-C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}], "+", 
+                  RowBox[{\(\[Rho]\_s\%2\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{\(C\_2[b]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}], "+", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}]}], ")"}]}]}], \(C\_1[
+              b + s]\ \((\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\_2\ \[Rho]\_s\ C\
+\_2[b])\)\^2\)]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]s\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      RowBox[{\(1\/\(C\_1[b + s]\^2\ \((\[Alpha]\_1\ C\_1[b + s] - \
+\[Alpha]\_2\ \[Rho]\_ss\ C\_2[b])\)\^2\)\), 
+        RowBox[{"(", 
+          RowBox[{
+            
+            RowBox[{\(-\[Alpha]\_2\%3\), " ", \(\[Rho]\_ss\), 
+              " ", \(C\_2[b]\^2\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}], " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_2\), "\[Prime]",
+                  MultilineFunction->None], "[", "b", "]"}]}], "+", 
+            RowBox[{\(\[Alpha]\_1\%3\), " ", \(C\_1[b + s]\^2\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}], "2"],
+                   "-", 
+                  RowBox[{\(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}]}]}], 
+                ")"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\%2\), " ", \(\[Alpha]\_2\), 
+              " ", \(\[Rho]\_ss\), " ", \(C\_1[b + s]\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(-C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}], " ", 
+                    
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}], "-", 
+                  RowBox[{"2", " ", \(C\_2[b]\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        SuperscriptBox[
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), "]"}],
+                           "2"], "-", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}]}], ")"}]}]}], ")"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\%2\), 
+              " ", \(C\_2[b]\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"2", " ", \(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_1\), "\[Prime]",
+                        MultilineFunction->None], "[", \(b + s\), "]"}], " ", 
+                    
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}], "+", 
+                  RowBox[{\(\[Rho]\_ss\%2\), " ", \(C\_2[b]\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        SuperscriptBox[
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), "]"}],
+                           "2"], "-", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}]}], ")"}]}]}], ")"}]}]}], 
+          ")"}]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]b\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      RowBox[{
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{\(-\[Alpha]\_1\%3\), " ", \(C\_1[b + s]\^3\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_2\%2\), " ", \(\[Alpha]\_22\), 
+              " ", \(\[Rho]\_s\), " ", \(C\_2[b]\^3\), " ", 
+              RowBox[{
+                SuperscriptBox[\(C\_1\), "\[Prime]",
+                  MultilineFunction->None], "[", \(b + s\), "]"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\%2\), " ", \(\[Rho]\_s\), 
+              " ", \(C\_1[b + s]\^2\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(\[Alpha]\_22\), " ", \(C\_1[b + s]\), " ", 
+                    RowBox[{
+                      SuperscriptBox[\(C\_2\), "\[Prime]",
+                        MultilineFunction->None], "[", "b", "]"}]}], "+", 
+                  RowBox[{\(\[Alpha]\_2\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{"3", " ", \(C\_2[b]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}], "-", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}]}], ")"}]}], "+", 
+            
+            RowBox[{\(\[Alpha]\_1\), " ", \(\[Alpha]\_2\), 
+              " ", \(C\_1[b + s]\), " ", \(C\_2[b]\), " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{\(\[Alpha]\_2\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{\(-2\), " ", \(C\_2[b]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}], "+", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}], "-", 
+                  RowBox[{\(\[Alpha]\_22\), " ", \(\[Rho]\_s\%2\), " ", 
+                    RowBox[{"(", 
+                      RowBox[{
+                        RowBox[{\(C\_2[b]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_1\), "\[Prime]",
+                              MultilineFunction->None], "[", \(b + s\), 
+                            "]"}]}], "+", 
+                        RowBox[{\(C\_1[b + s]\), " ", 
+                          RowBox[{
+                            SuperscriptBox[\(C\_2\), "\[Prime]",
+                              MultilineFunction->None], "[", "b", "]"}]}]}], 
+                      ")"}]}]}], ")"}]}]}], ")"}], 
+        "/", \((C\_1[b + s]\^2\ \((\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\_22\ \
+\[Rho]\_s\ C\_2[b])\)\^2\ \@\(\[Alpha]\_1\%2\ C\_1[b + s]\^2 - 2\ \[Alpha]\_1\
+\ \[Alpha]\_2\ \[Rho]\_s\ C\_1[b + s]\ C\_2[b] + \[Alpha]\_2\%2\ \
+C\_2[b]\^2\))\)}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 
+        0]], \(\(C\_2[
+              b]\ \((\[Alpha]\_1\ \((\[Alpha]\_2 - \[Alpha]\_22)\)\ \[Rho]\_s\
+\ C\_1[b + 
+                      s] + \[Alpha]\_2\ \((\(-\[Alpha]\_2\) + \[Alpha]\_22\ \
+\[Rho]\_s\%2)\)\ C\_2[
+                    b])\)\)\/\(\((\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\_22\ \
+\[Rho]\_s\ C\_2[b])\)\^2\ \@\(\[Alpha]\_1\%2\ C\_1[b + s]\^2 - 2\ \[Alpha]\_1\
+\ \[Alpha]\_2\ \[Rho]\_s\ C\_1[b + s]\ C\_2[b] + \[Alpha]\_2\%2\ C\_2[b]\^2\)\
+\)\)}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]s\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      RowBox[{"-", 
+        FractionBox[
+          
+          RowBox[{\(C\_2[b]\), 
+            " ", \((\[Alpha]\_1\%2\ \[Rho]\_ss\ C\_1[b + s]\^2 - 
+                2\ \[Alpha]\_1\ \[Alpha]\_2\ C\_1[b + s]\ C\_2[
+                    b] + \[Alpha]\_2\%2\ \[Rho]\_ss\ C\_2[b]\^2)\), " ", 
+            RowBox[{
+              SuperscriptBox[\(C\_1\), "\[Prime]",
+                MultilineFunction->None], "[", \(b + s\), 
+              "]"}]}], \(C\_1[b + s]\^2\ \((\[Alpha]\_1\ C\_1[b + s] - \
+\[Alpha]\_2\ \[Rho]\_ss\ C\_2[b])\)\^2\)]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]b\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 0]], 
+      FractionBox[
+        RowBox[{\((\[Alpha]\_1\%2\ \[Rho]\_s\ C\_1[b + s]\^2 - 
+              2\ \[Alpha]\_1\ \[Alpha]\_2\ C\_1[b + s]\ C\_2[
+                  b] + \[Alpha]\_2\%2\ \[Rho]\_s\ C\_2[b]\^2)\), " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{\(-C\_2[b]\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_1\), "\[Prime]",
+                    MultilineFunction->None], "[", \(b + s\), "]"}]}], "+", 
+              RowBox[{\(C\_1[b + s]\), " ", 
+                RowBox[{
+                  SuperscriptBox[\(C\_2\), "\[Prime]",
+                    MultilineFunction->None], "[", "b", "]"}]}]}], 
+            ")"}]}], \(C\_1[b + s]\^2\ \((\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\
+\_2\ \[Rho]\_s\ C\_2[b])\)\^2\)]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_2\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 
+        0]], \(\(\[Alpha]\_1\ \((\(-1\) + \[Rho]\_s\%2)\)\ C\_2[b]\^2\)\/\((\
+\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\_2\ \[Rho]\_s\ C\_2[b])\)\^2\)}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+          FontColor->RGBColor[0, 0.517647, 0]], 
+        RowBox[{
+          StyleBox["(",
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+            FontColor->RGBColor[0, 0.517647, 0]], 
+          StyleBox[")",
+            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[0, 0.517647, 
+        0]], \(-\(\(\[Alpha]\_2\ \((\(-1\) + \[Rho]\_s\%2)\)\ \
+C\_2[b]\^2\)\/\((\[Alpha]\_1\ C\_1[b + s] - \[Alpha]\_2\ \[Rho]\_s\ \
+C\_2[b])\)\^2\)\)}]], "Input"],
+
+Cell[BoxData[
+    \(First\ Order\)], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(\[PartialD]P\/\[PartialD]s\_1 = \(\(\[PartialD]P\/\[PartialD]s\) \
+\[PartialD]s\/\[PartialD]s\_1 + \(\[PartialD]P\/\[PartialD]b\) \[PartialD]b\/\
+\[PartialD]s\_1 + \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\) \
+\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1 + \(\[PartialD]P\/\[PartialD]\[Alpha]\
+\_2\) \[PartialD]\[Alpha]\_2\/\[PartialD]s\_1 = \[PartialD]P\/\[PartialD]s + \
+\(\[PartialD]P\/\[PartialD]\[Alpha]\_1\) \[PartialD]\[Alpha]\_1\/\[PartialD]s\
+\_1\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]P\/\[PartialD]b\_1\), "=", 
+      RowBox[{\(\[PartialD]P\/\[PartialD]b\), "+", 
+        RowBox[{
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+            FontColor->RGBColor[0, 0, 
+            1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]P\/\[PartialD]\[Alpha]\_11\), "=", 
+      RowBox[{\(\(\[PartialD]P\/\[PartialD]s\) \[PartialD]s\/\[PartialD]\
+\[Alpha]\_11 + \(\[PartialD]P\/\[PartialD]b\) \[PartialD]b\/\[PartialD]\
+\[Alpha]\_11 + \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\) \
+\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11 + \(\[PartialD]P\/\[PartialD]\
+\[Alpha]\_2\) \[PartialD]\[Alpha]\_2\/\[PartialD]\[Alpha]\_11\), "=", 
+        RowBox[{
+          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+            FontColor->RGBColor[0, 0, 
+            1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(\[PartialD]P\/\[PartialD]\[Alpha]\_22\), "=", 
+      RowBox[{\(\(\[PartialD]P\/\[PartialD]s\) \[PartialD]s\/\[PartialD]\
+\[Alpha]\_22 + \(\[PartialD]P\/\[PartialD]b\) \[PartialD]b\/\[PartialD]\
+\[Alpha]\_22 + \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\) \
+\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22 + \(\[PartialD]P\/\[PartialD]\
+\[Alpha]\_2\) \[PartialD]\[Alpha]\_2\/\[PartialD]\[Alpha]\_22\), "=", 
+        RowBox[{
+          RowBox[{
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+              FontColor->RGBColor[0, 0, 
+              1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+          "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}]}]}]], "Input"],
+
+Cell[BoxData[
+    \(Second\ Order\)], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{"We", " ", "actually", " ", "need", " ", 
+        RowBox[{"only", ":", "\[IndentingNewLine]", 
+          StyleBox[\(\[PartialD]\^2 P\/\[PartialD]b\_1\^2\),
+            FontColor->RGBColor[1, 0, 0]]}]}], 
+      StyleBox["=",
+        FontColor->RGBColor[1, 0, 0]], 
+      StyleBox["\[IndentingNewLine]",
+        FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+        RowBox[{
+          RowBox[{\(\[PartialD]\/\[PartialD]b\), 
+            RowBox[{"(", 
+              RowBox[{\(\[PartialD]P\/\[PartialD]b\), "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}], 
+              ")"}]}], "+", 
+          RowBox[{
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+              FontColor->RGBColor[0, 0, 
+              1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+            RowBox[{"(", 
+              RowBox[{\(\[PartialD]P\/\[PartialD]b\), "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}], 
+              ")"}]}]}], "=", "\[IndentingNewLine]", 
+        RowBox[{\((\[PartialD]\^2 P\/\[PartialD]b\^2)\), "+", 
+          RowBox[{"2", 
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+              FontColor->RGBColor[0, 0, 
+              1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \[PartialD]b\
+\))\)}], "+", 
+          RowBox[{
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+              FontColor->RGBColor[0, 0, 1]], 
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+              FontColor->RGBColor[0, 0, 
+              1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], "+", 
+          RowBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  StyleBox[\(\[PartialD]\/\[PartialD]b\),
+                    FontColor->RGBColor[0, 0.517647, 0]], 
+                  RowBox[{
+                    StyleBox["(",
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    StyleBox[")",
+                      FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+                StyleBox["+",
+                  FontColor->RGBColor[0, 0.517647, 0]], 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 1]], 
+                  StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                    FontColor->RGBColor[0, 0.517647, 0]], 
+                  RowBox[{
+                    StyleBox["(",
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    StyleBox[")",
+                      FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+              ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]], \
+"Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_22\^2\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          RowBox[{
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\
+\/\[PartialD]\[Alpha]\_22)\)}], 
+            "+", \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\)\)}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], ")"}]}], 
+              "+", 
+              RowBox[{\(\[PartialD]\/\[PartialD]\[Alpha]\_2\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], 
+                  ")"}]}]}], "=", "\[IndentingNewLine]", 
+            RowBox[{
+              RowBox[{
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\
+\[PartialD]P\/\[PartialD]\[Alpha]\_2)\)}], "+", 
+                RowBox[{\(\[PartialD]\/\[PartialD]\[Alpha]\_2\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], 
+                "+", \(\(\[PartialD]\/\[PartialD]\[Alpha]\_2\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_2)\)\)}], "=", "\[IndentingNewLine]", 
+              
+              RowBox[{\((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_2\^2)\), "+", 
+                
+                RowBox[{"2", 
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_2 \
+\[PartialD]\[Alpha]\_1\))\)}], "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 1]], 
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+                "+", 
+                RowBox[{
+                  RowBox[{"(", 
+                    RowBox[{
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_2\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}], "+", 
+                      RowBox[{
+                        
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\
+\_22\),
+                          FontColor->RGBColor[0, 0, 1]], 
+                        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+                    ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}]}\
+], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_11\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          
+          RowBox[{\(\(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_11)\)\), "+", 
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\
+\/\[PartialD]\[Alpha]\_11)\)}]}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              RowBox[{\(\[PartialD]\/\[PartialD]b\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+11\),
+                      FontColor->RGBColor[0, 0, 
+                      1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                  ")"}]}], "+", 
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+11\),
+                      FontColor->RGBColor[0, 0, 
+                      1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                  ")"}]}]}], "=", "\[IndentingNewLine]", 
+            RowBox[{
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \((\[PartialD]\^2 P\/\(\[PartialD]b \
+\[PartialD]\[Alpha]\_1\))\)}], "+", 
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                  FontColor->RGBColor[0, 0, 1]], 
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+              "+", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\/\[PartialD]b\),
+                        FontColor->RGBColor[0, 0.517647, 0]], 
+                      RowBox[{
+                        StyleBox["(",
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\
+\_11\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        StyleBox[")",
+                          FontColor->RGBColor[0, 0.517647, 0]]}]}], "+", 
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                        FontColor->RGBColor[0, 0, 1]], 
+                      StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                        FontColor->RGBColor[0, 0.517647, 0]], 
+                      RowBox[{
+                        StyleBox["(",
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\
+\_11\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        StyleBox[")",
+                          FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+                  ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}], 
+      "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 P\/\(\[PartialD]s\_1 \[PartialD]b\_1\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          
+          RowBox[{\(\(\[PartialD]\/\[PartialD]s\) \
+\((\[PartialD]P\/\[PartialD]b\_1)\)\), "+", 
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\
+\/\[PartialD]b\_1)\)}]}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              RowBox[{\(\[PartialD]\/\[PartialD]s\), 
+                RowBox[{"(", 
+                  RowBox[{\(\[PartialD]P\/\[PartialD]b\), "+", 
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}], 
+                  ")"}]}], "+", 
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                RowBox[{"(", 
+                  RowBox[{\(\[PartialD]P\/\[PartialD]b\), "+", 
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}], 
+                  ")"}]}]}], "=", "\[IndentingNewLine]", 
+            RowBox[{
+              
+              RowBox[{\(\(\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\
+\[PartialD]b)\)\), "+", 
+                RowBox[{\(\[PartialD]\/\[PartialD]s\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\
+\[PartialD]P\/\[PartialD]b)\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}]}], "=", "\[IndentingNewLine]", 
+              
+              RowBox[{\((\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]s\))\), 
+                "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\
+\[Alpha]\_1\))\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]b\))\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 1]], 
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+                "+", 
+                RowBox[{
+                  RowBox[{"(", 
+                    RowBox[{
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\/\[PartialD]s\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\)\
+,
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}], "+", 
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                          FontColor->RGBColor[0, 0, 1]], 
+                        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\)\
+,
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+                    ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}]}\
+], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]s\_1 \[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          
+          RowBox[{\(\(\[PartialD]\/\[PartialD]s\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\)\), "+", 
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\
+\/\[PartialD]\[Alpha]\_22)\)}]}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              RowBox[{\(\[PartialD]\/\[PartialD]s\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], ")"}]}], 
+              "+", 
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], 
+                  ")"}]}]}], "=", "\[IndentingNewLine]", 
+            RowBox[{
+              RowBox[{
+                RowBox[{\(\[PartialD]\/\[PartialD]s\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], 
+                "+", \(\(\[PartialD]\/\[PartialD]s\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_2)\)\), "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\
+\[PartialD]P\/\[PartialD]\[Alpha]\_2)\)}]}], "=", "\[IndentingNewLine]", 
+              
+              RowBox[{\((\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\[Alpha]\
+\_2\))\), "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]s \[PartialD]\
+\[Alpha]\_1\))\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 1]], 
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+                "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\))\)}], "+", 
+                RowBox[{
+                  RowBox[{"(", 
+                    RowBox[{
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\/\[PartialD]s\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}], "+", 
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]s\_1\),
+                          FontColor->RGBColor[0, 0, 1]], 
+                        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+                    ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}]}\
+], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]\[Alpha]\_11 \[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          RowBox[{
+            StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+              FontColor->RGBColor[0, 0, 
+              1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_22)\)}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                      FontColor->RGBColor[0, 0, 
+                      1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                  "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], ")"}]}], 
+            "=", "\[IndentingNewLine]", 
+            RowBox[{
+              RowBox[{
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\
+\[PartialD]P\/\[PartialD]\[Alpha]\_2)\)}]}], "=", "\[IndentingNewLine]", 
+              RowBox[{
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\)\
+,
+                    FontColor->RGBColor[0, 0, 1]], 
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+                "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\))\)}], "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_11\)\
+,
+                    FontColor->RGBColor[0, 0, 1]], 
+                  StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                    FontColor->RGBColor[0, 0.517647, 0]], 
+                  RowBox[{
+                    StyleBox["(",
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    
+                    StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                      FontColor->RGBColor[0, 0.517647, 0]], 
+                    StyleBox[")",
+                      FontColor->RGBColor[0, 0.517647, 
+                      0]]}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}\
+]}], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        StyleBox[\(\[PartialD]\^2 
+                P\/\(\[PartialD]b\_1 \[PartialD]\[Alpha]\_22\)\),
+          FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["=",
+          FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+        RowBox[{
+          
+          RowBox[{\(\(\[PartialD]\/\[PartialD]b\) \
+\((\[PartialD]P\/\[PartialD]\[Alpha]\_22)\)\), "+", 
+            RowBox[{
+              StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                FontColor->RGBColor[0, 0, 
+                1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\[PartialD]P\
+\/\[PartialD]\[Alpha]\_22)\)}]}], "=", "\[IndentingNewLine]", 
+          RowBox[{
+            RowBox[{
+              RowBox[{\(\[PartialD]\/\[PartialD]b\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], ")"}]}], 
+              "+", 
+              RowBox[{
+                StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                  FontColor->RGBColor[0, 0, 
+                  1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    "+", \(\[PartialD]P\/\[PartialD]\[Alpha]\_2\)}], 
+                  ")"}]}]}], "=", "\[IndentingNewLine]", 
+            RowBox[{
+              RowBox[{
+                RowBox[{\(\[PartialD]\/\[PartialD]b\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}], 
+                "+", \(\(\[PartialD]\/\[PartialD]b\) \((\[PartialD]P\/\
+\[PartialD]\[Alpha]\_2)\)\), "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), \((\
+\[PartialD]P\/\[PartialD]\[Alpha]\_2)\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \(\[PartialD]\/\[PartialD]\[Alpha]\_1\), 
+                  RowBox[{"(", 
+                    RowBox[{
+                      
+                      StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_\
+22\),
+                        FontColor->RGBColor[0, 0, 
+                        1]], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}], 
+                    ")"}]}]}], "=", "\[IndentingNewLine]", 
+              
+              RowBox[{\((\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\[Alpha]\
+\_2\))\), "+", 
+                RowBox[{
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]b \[PartialD]\
+\[Alpha]\_1\))\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\(\[PartialD]\[Alpha]\_1 \
+\[PartialD]\[Alpha]\_2\))\)}], "+", 
+                RowBox[{
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                    FontColor->RGBColor[0, 0, 1]], 
+                  
+                  StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\[Alpha]\_22\)\
+,
+                    FontColor->RGBColor[0, 0, 
+                    1]], \((\[PartialD]\^2 P\/\[PartialD]\[Alpha]\_1\^2)\)}], 
+                "+", 
+                RowBox[{
+                  RowBox[{"(", 
+                    RowBox[{
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\/\[PartialD]b\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}], 
+                      StyleBox["+",
+                        FontColor->RGBColor[0, 0.517647, 0]], 
+                      RowBox[{
+                        StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]b\_1\),
+                          FontColor->RGBColor[0, 0, 1]], 
+                        StyleBox[\(\[PartialD]\/\[PartialD]\[Alpha]\_1\),
+                          FontColor->RGBColor[0, 0.517647, 0]], 
+                        RowBox[{
+                          StyleBox["(",
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          
+                          StyleBox[\(\[PartialD]\[Alpha]\_1\/\[PartialD]\
+\[Alpha]\_22\),
+                            FontColor->RGBColor[0, 0.517647, 0]], 
+                          StyleBox[")",
+                            FontColor->RGBColor[0, 0.517647, 0]]}]}]}], 
+                    ")"}], \(\[PartialD]P\/\[PartialD]\[Alpha]\_1\)}]}]}]}]}]}\
+], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+    \(Generalized\ \ \ BiSABR\ \ \ SPREADOPTION\)], "Input",
+  TextAlignment->Center,
+  FontSize->36],
+
+Cell[BoxData[{
+    \(\(\(dF\_1 = \[Alpha]\_1\ F\_1\^\[Beta]\_1\ \
+dW\_1;\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_1 = \ \(\[Nu]\_1\) \[Alpha]\_1\ dW\_\(\(v1\)\(\
+\[IndentingNewLine]\)
+            \);\)\), "\[IndentingNewLine]", 
+    \(\(\(dW\_1\) dW\_v1 = \(\(\(\[Rho]\)\(\ \)\)\_1\) dt;\)\)}], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[{
+    \(\(\(dF\_2 = \[Alpha]\_2\ F\_2\^\[Beta]\_2\ \
+dW\_2;\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_2 = \ \(\[Nu]\_2\) \[Alpha]\_2\ dW\_\(\(v2\)\(\
+\[IndentingNewLine]\)
+            \);\)\), "\[IndentingNewLine]", 
+    \(\(\(dW\_2\) dW\_v2 = \[Rho]\_2\ dt;\)\)}], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[
+    \(plus\ the\ links\)], "Input"],
+
+Cell[BoxData[
+    \(\(dW\_1\) dW\_2 = \[Rho]\_s\ dt; \(dW\_1\) 
+        dW\_v2 = \[Rho]\_c12\ dt; \(dW\_2\) 
+        dW\_v1 = \[Rho]\_c21\ dt; \(dW\_v1\) 
+        dW\_v2 = \[Rho]\_v\ dt; \)], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[
+    \(and\ the\ final\ payment\ \(\(is\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(Payoff = max[\(a\_1\) f\_1 - \(a\_2\) f\_2 - K, 0]\)], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]],
+
+Cell[BoxData[
+    \(we\ do\ the\ change\ of\ \(process : \ F\_1\^a\) = \(\(a\_1\) 
+          F\_\(\(1\)\(\ \)\)\ and\ \ F\_2\^a = \(a\_2\) 
+          F\_\(\(2\)\(\ \)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(So\ the\ preceding\ equations\ change\ \
+\(\(to\)\(\ \)\(:\)\(\ \)\)\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(\(dF\_1\^a = \(a\_1\^\(1 - \[Beta]\_1\)\) \[Alpha]\_1\ \
+\((F\_1\^a)\)\^\[Beta]\_1\ dW\_1\ ;\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_1 = \ \(\[Nu]\_1\) \[Alpha]\_1\ dW\_\(\(v1\)\(\
+\[IndentingNewLine]\)
+            \);\)\)}], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[{
+    \(\(\(dF\_2\^a = \(a\_2\^\(1 - \[Beta]\_2\)\) \[Alpha]\_2\ \
+\((F\_2\^a)\)\^\[Beta]\_1\ dW\_2;\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_2 = \ \(\[Nu]\_2\) \[Alpha]\_2\ dW\_\(\(v2\)\(\
+\[IndentingNewLine]\)
+            \);\)\)}], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(this\ equivalent\ to\ redefine\ \(\[Alpha]\_\(\(1\)\(\ \)\)\) 
+        and\ \[Alpha]\_2\ \(by : \ \ \[Alpha]\_1\^a\) = \(\(a\_1\^\(1 - \
+\[Beta]\_1\)\) \[Alpha]\_1\ \ and\ \[Alpha]\_2\^a = \(a\_2\^\(1 - \
+\[Beta]\_2\)\) \[Alpha]\_2\)\)], "Input"],
+
+Cell[BoxData[
+    \(with\ this\ new\ set\ of\ variables\ the\ problem\ is\ to\ price\ the\ \
+following\ \(\(process\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[{
+    \(\(\(dF\_1\^a = \[Alpha]\_1\^a\ \((F\_1\^a)\)\^\[Beta]\_1\ dW\_1\ ;\)\(\
+\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_1\^a = \ \(\[Nu]\_1\) \[Alpha]\_1\^a\ dW\_\(\(v1\)\(\
+\[IndentingNewLine]\)
+            \);\)\)}], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[{
+    \(\(\(dF\_2\^a = \[Alpha]\_2\^a\ \((F\_2\^a)\)\^\[Beta]\_1\ dW\_2;\)\(\
+\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(d\[Alpha]\_2\^a = \ \(\[Nu]\_2\) \[Alpha]\_2\^a\ dW\_\(\(v2\)\(\
+\[IndentingNewLine]\)
+            \);\)\)}], "Input",
+  Background->GrayLevel[0.900008]],
+
+Cell[BoxData[
+    \(and\ the\ final\ payment\ \(\(is\)\(\ \)\(:\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(Payoff = max[f\_1\^a - f\_2\^a - K, 0]\)], "Input",
+  Background->RGBColor[1, 0.54902, 0.776471]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 949}},
+AutoGeneratedPackage->None,
+WindowSize->{1181, 998},
+WindowMargins->{{Automatic, -5}, {-21, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PrintingMargins"->{{72, 72}, {54, 54}}},
+CellLabelAutoDelete->True
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 98, 3, 55, "Input"],
+Cell[1855, 56, 748, 21, 129, "Input"],
+Cell[2606, 79, 957, 31, 129, "Input"],
+Cell[3566, 112, 49, 1, 30, "Input"],
+Cell[3618, 115, 851, 30, 46, "Input"],
+Cell[4472, 147, 78, 1, 30, "Input"],
+Cell[4553, 150, 1538, 26, 87, "Input"],
+Cell[6094, 178, 63, 1, 30, "Input"],
+Cell[6160, 181, 63, 1, 30, "Input"],
+Cell[6226, 184, 98, 2, 30, "Input"],
+Cell[6327, 188, 436, 8, 50, "Input"],
+Cell[6766, 198, 114, 2, 30, "Input"],
+Cell[6883, 202, 1000, 17, 68, "Input"],
+Cell[7886, 221, 185, 3, 30, "Input"],
+Cell[8074, 226, 175, 3, 30, "Input"],
+Cell[8252, 231, 60, 1, 30, "Input"],
+Cell[8315, 234, 229, 4, 30, "Input"],
+Cell[8547, 240, 406, 6, 44, "Input"],
+Cell[8956, 248, 163, 3, 70, "Input"],
+Cell[9122, 253, 54, 1, 30, "Input"],
+Cell[9179, 256, 765, 14, 215, "Input"],
+Cell[9947, 272, 97, 2, 30, "Input"],
+Cell[10047, 276, 1092, 16, 90, "Input"],
+Cell[11142, 294, 65, 1, 30, "Input"],
+Cell[11210, 297, 418, 7, 41, "Input"],
+Cell[11631, 306, 151, 2, 30, "Input"],
+Cell[11785, 310, 782, 12, 65, "Input"],
+Cell[12570, 324, 66, 1, 30, "Input"],
+Cell[12639, 327, 817, 12, 76, "Input"],
+Cell[13459, 341, 114, 2, 30, "Input"],
+Cell[13576, 345, 671, 10, 76, "Input"],
+Cell[14250, 357, 786, 11, 128, "Input"],
+Cell[15039, 370, 72, 1, 30, "Input"],
+Cell[15114, 373, 248, 4, 42, "Input"],
+Cell[15365, 379, 83, 1, 30, "Input"],
+Cell[15451, 382, 645, 11, 58, "Input"],
+Cell[16099, 395, 73, 1, 30, "Input"],
+Cell[16175, 398, 532, 9, 58, "Input"],
+Cell[16710, 409, 166, 2, 50, "Input"],
+Cell[16879, 413, 1490, 25, 87, "Input"],
+Cell[18372, 440, 192, 3, 30, "Input"],
+Cell[18567, 445, 78, 1, 30, "Input"],
+Cell[18648, 448, 1557, 26, 87, "Input"],
+Cell[20208, 476, 875, 13, 76, "Input"],
+Cell[21086, 491, 96, 2, 30, "Input"],
+Cell[21185, 495, 2319, 40, 230, "Input"],
+Cell[23507, 537, 114, 2, 30, "Input"],
+Cell[23624, 541, 2404, 40, 214, "Input"],
+Cell[26031, 583, 70, 1, 30, "Input"],
+Cell[26104, 586, 2641, 45, 268, "Input"],
+Cell[28748, 633, 933, 14, 126, "Input"],
+Cell[29684, 649, 384, 6, 46, "Input"],
+Cell[30071, 657, 1653, 49, 236, "Input"],
+Cell[31727, 708, 268, 5, 44, "Input"],
+Cell[31998, 715, 551, 15, 50, "Input"],
+Cell[32552, 732, 264, 10, 30, "Input"],
+Cell[32819, 744, 358, 7, 46, "Input"],
+Cell[33180, 753, 41, 1, 30, "Input"],
+Cell[33224, 756, 41, 1, 30, "Input"],
+Cell[33268, 759, 186, 3, 33, "Input"],
+Cell[33457, 764, 59, 1, 30, "Input"],
+Cell[33519, 767, 348, 5, 49, "Input"],
+Cell[33870, 774, 460, 6, 49, "Input"],
+Cell[34333, 782, 331, 5, 49, "Input"],
+Cell[34667, 789, 327, 5, 49, "Input"],
+Cell[34997, 796, 256, 4, 30, "Input"],
+Cell[35256, 802, 60, 1, 30, "Input"],
+Cell[35319, 805, 871, 14, 49, "Input"],
+Cell[36193, 821, 1075, 16, 86, "Input"],
+Cell[37271, 839, 849, 13, 49, "Input"],
+Cell[38123, 854, 910, 13, 49, "Input"],
+Cell[39036, 869, 559, 11, 110, "Input"],
+Cell[39598, 882, 118, 2, 50, "Input"],
+Cell[39719, 886, 264, 5, 53, "Input"],
+Cell[39986, 893, 113, 2, 30, "Input"],
+Cell[40102, 897, 1284, 32, 150, "Input"],
+Cell[41389, 931, 72, 1, 30, "Input"],
+Cell[41464, 934, 106, 2, 50, "Input"],
+
+Cell[CellGroupData[{
+Cell[41595, 940, 178, 3, 36, "Input"],
+Cell[41776, 945, 171, 3, 36, "Output"]
+}, Open  ]],
+Cell[41962, 951, 159, 4, 30, "Input"],
+Cell[42124, 957, 195, 5, 50, "Input"],
+Cell[42322, 964, 521, 11, 30, "Input"],
+
+Cell[CellGroupData[{
+Cell[42868, 979, 248, 6, 67, "Input"],
+Cell[43119, 987, 472, 10, 30, "Output"]
+}, Open  ]],
+Cell[43606, 1000, 509, 11, 30, "Input"],
+
+Cell[CellGroupData[{
+Cell[44140, 1015, 244, 6, 67, "Input"],
+Cell[44387, 1023, 459, 10, 30, "Output"]
+}, Open  ]],
+Cell[44861, 1036, 998, 21, 50, "Input"],
+
+Cell[CellGroupData[{
+Cell[45884, 1061, 248, 6, 67, "Input"],
+Cell[46135, 1069, 899, 19, 30, "Output"]
+}, Open  ]],
+Cell[47049, 1091, 508, 11, 30, "Input"],
+
+Cell[CellGroupData[{
+Cell[47582, 1106, 243, 6, 67, "Input"],
+Cell[47828, 1114, 458, 10, 30, "Output"]
+}, Open  ]],
+Cell[48301, 1127, 149, 2, 31, "Input"],
+
+Cell[CellGroupData[{
+Cell[48475, 1133, 272, 6, 67, "Input"],
+Cell[48750, 1141, 124, 2, 30, "Output"]
+}, Open  ]],
+Cell[48889, 1146, 147, 2, 31, "Input"],
+
+Cell[CellGroupData[{
+Cell[49061, 1152, 272, 6, 67, "Input"],
+Cell[49336, 1160, 125, 2, 30, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[49498, 1167, 311, 7, 46, "Input"],
+Cell[49812, 1176, 697, 15, 30, "Output"]
+}, Open  ]],
+Cell[50524, 1194, 115, 2, 46, "Input"],
+
+Cell[CellGroupData[{
+Cell[50664, 1200, 327, 8, 46, "Input"],
+Cell[50994, 1210, 1048, 23, 30, "Output"]
+}, Open  ]],
+Cell[52057, 1236, 121, 2, 46, "Input"],
+
+Cell[CellGroupData[{
+Cell[52203, 1242, 375, 8, 46, "Input"],
+Cell[52581, 1252, 457, 10, 30, "Output"]
+}, Open  ]],
+Cell[53053, 1265, 159, 2, 49, "Input"],
+
+Cell[CellGroupData[{
+Cell[53237, 1271, 375, 8, 46, "Input"],
+Cell[53615, 1281, 231, 5, 30, "Output"]
+}, Open  ]],
+Cell[53861, 1289, 159, 2, 49, "Input"],
+
+Cell[CellGroupData[{
+Cell[54045, 1295, 323, 7, 46, "Input"],
+Cell[54371, 1304, 1877, 46, 30, "Output"]
+}, Open  ]],
+Cell[56263, 1353, 115, 2, 46, "Input"],
+
+Cell[CellGroupData[{
+Cell[56403, 1359, 375, 8, 46, "Input"],
+Cell[56781, 1369, 677, 15, 30, "Output"]
+}, Open  ]],
+Cell[57473, 1387, 159, 2, 49, "Input"],
+
+Cell[CellGroupData[{
+Cell[57657, 1393, 375, 8, 46, "Input"],
+Cell[58035, 1403, 668, 15, 30, "Output"]
+}, Open  ]],
+Cell[58718, 1421, 159, 2, 49, "Input"],
+Cell[58880, 1425, 121, 2, 46, "Input"],
+
+Cell[CellGroupData[{
+Cell[59026, 1431, 396, 7, 46, "Input"],
+Cell[59425, 1440, 48, 1, 29, "Output"]
+}, Open  ]],
+Cell[59488, 1444, 184, 3, 49, "Input"],
+
+Cell[CellGroupData[{
+Cell[59697, 1451, 401, 8, 46, "Input"],
+Cell[60101, 1461, 44, 1, 29, "Output"]
+}, Open  ]],
+Cell[60160, 1465, 184, 3, 49, "Input"],
+
+Cell[CellGroupData[{
+Cell[60369, 1472, 425, 8, 46, "Input"],
+Cell[60797, 1482, 75, 1, 30, "Output"]
+}, Open  ]],
+Cell[60887, 1486, 204, 3, 49, "Input"],
+Cell[61094, 1491, 100, 2, 46, "Input"],
+Cell[61197, 1495, 176, 3, 44, "Input"],
+Cell[61376, 1500, 176, 3, 44, "Input"],
+Cell[61555, 1505, 153, 2, 44, "Input"],
+Cell[61711, 1509, 194, 3, 44, "Input"],
+Cell[61908, 1514, 61, 1, 46, "Input"],
+Cell[61972, 1517, 89, 1, 30, "Input"],
+Cell[62064, 1520, 1089, 19, 150, "Input"],
+Cell[63156, 1541, 1266, 19, 159, "Input"],
+Cell[64425, 1562, 1155, 16, 163, "Input"],
+Cell[65583, 1580, 446, 7, 47, "Input"],
+Cell[66032, 1589, 1269, 19, 159, "Input"],
+Cell[67304, 1610, 987, 15, 83, "Input"],
+Cell[68294, 1627, 876, 14, 83, "Input"],
+Cell[69173, 1643, 1292, 19, 155, "Input"],
+Cell[70468, 1664, 876, 14, 83, "Input"],
+Cell[71347, 1680, 526, 8, 69, "Input"],
+Cell[71876, 1690, 1294, 19, 155, "Input"],
+Cell[73173, 1711, 826, 12, 47, "Input"],
+Cell[74002, 1725, 80, 1, 50, "Input"],
+Cell[74085, 1728, 353, 6, 47, "Input"],
+Cell[74441, 1736, 537, 11, 47, "Input"],
+Cell[74981, 1749, 634, 13, 47, "Input"],
+Cell[75618, 1764, 242, 3, 47, "Input"],
+Cell[75863, 1769, 697, 14, 47, "Input"],
+Cell[76563, 1785, 813, 18, 47, "Input"],
+Cell[77379, 1805, 922, 21, 47, "Input"],
+Cell[78304, 1828, 345, 5, 47, "Input"],
+Cell[78652, 1835, 505, 11, 47, "Input"],
+Cell[79160, 1848, 590, 13, 47, "Input"],
+Cell[79753, 1863, 92, 1, 30, "Input"],
+Cell[79848, 1866, 353, 6, 47, "Input"],
+Cell[80204, 1874, 222, 3, 47, "Input"],
+Cell[80429, 1879, 242, 3, 47, "Input"],
+Cell[80674, 1884, 242, 3, 47, "Input"],
+Cell[80919, 1889, 350, 5, 47, "Input"],
+Cell[81272, 1896, 362, 6, 47, "Input"],
+Cell[81637, 1904, 362, 6, 47, "Input"],
+Cell[82002, 1912, 278, 5, 47, "Input"],
+Cell[82283, 1919, 288, 5, 47, "Input"],
+Cell[82574, 1926, 298, 5, 47, "Input"],
+Cell[82875, 1933, 1721, 29, 127, "Input"],
+Cell[84599, 1964, 79, 1, 30, "Input"],
+Cell[84681, 1967, 73, 1, 30, "Input"],
+Cell[84757, 1970, 465, 8, 63, "Input"],
+Cell[85225, 1980, 104, 2, 46, "Input"],
+Cell[85332, 1984, 139, 2, 58, "Input"],
+Cell[85474, 1988, 616, 11, 59, "Input"],
+Cell[86093, 2001, 1321, 20, 130, "Input"],
+
+Cell[CellGroupData[{
+Cell[87439, 2025, 1098, 20, 64, "Input"],
+Cell[88540, 2047, 890, 14, 62, "Output"]
+}, Open  ]],
+Cell[89445, 2064, 1636, 26, 167, "Input"],
+Cell[91084, 2092, 469, 7, 78, "Input"],
+Cell[91556, 2101, 26, 0, 30, "Input"],
+Cell[91585, 2103, 1214, 26, 95, "Input"],
+Cell[92802, 2131, 1335, 29, 52, "Input"],
+Cell[94140, 2162, 249, 4, 33, "Input"],
+Cell[94392, 2168, 125, 3, 46, "Input"],
+Cell[94520, 2173, 80, 1, 30, "Input"],
+Cell[94603, 2176, 3410, 77, 143, "Input"],
+Cell[98016, 2255, 63, 1, 30, "Input"],
+Cell[98082, 2258, 4100, 90, 223, "Input"],
+Cell[102185, 2350, 79, 1, 30, "Input"],
+Cell[102267, 2353, 104, 2, 30, "Input"],
+Cell[102374, 2357, 128, 2, 31, "Input"],
+Cell[102505, 2361, 41, 1, 30, "Input"],
+Cell[102549, 2364, 41, 1, 30, "Input"],
+Cell[102593, 2367, 194, 3, 50, "Input"],
+Cell[102790, 2372, 59, 1, 30, "Input"],
+Cell[102852, 2375, 86, 1, 30, "Input"],
+Cell[102941, 2378, 227, 4, 33, "Input"],
+Cell[103171, 2384, 66, 1, 30, "Input"],
+Cell[103240, 2387, 771, 18, 58, "Input"],
+Cell[104014, 2407, 2549, 56, 121, "Input"],
+Cell[106566, 2465, 441, 6, 59, "Input"],
+Cell[107010, 2473, 616, 9, 77, "Input"],
+Cell[107629, 2484, 91, 1, 30, "Input"],
+Cell[107723, 2487, 7044, 146, 129, "Input"],
+Cell[114770, 2635, 2219, 49, 47, "Input"],
+Cell[116992, 2686, 4231, 92, 108, "Input"],
+Cell[121226, 2780, 3941, 83, 127, "Input"],
+Cell[125170, 2865, 972, 22, 56, "Input"],
+Cell[126145, 2889, 1048, 25, 47, "Input"],
+Cell[127196, 2916, 1277, 29, 47, "Input"],
+Cell[128476, 2947, 662, 15, 47, "Input"],
+Cell[129141, 2964, 669, 16, 47, "Input"],
+Cell[129813, 2982, 80, 2, 46, "Input"],
+Cell[129896, 2986, 482, 7, 44, "Input"],
+Cell[130381, 2995, 313, 6, 44, "Input"],
+Cell[130697, 3003, 632, 10, 44, "Input"],
+Cell[131332, 3015, 717, 12, 44, "Input"],
+Cell[132052, 3029, 81, 2, 46, "Input"],
+Cell[132136, 3033, 3312, 71, 144, "Input"],
+Cell[135451, 3106, 5704, 130, 217, "Input"],
+Cell[141158, 3238, 3754, 83, 181, "Input"],
+Cell[144915, 3323, 5454, 113, 217, "Input"],
+Cell[150372, 3438, 5786, 128, 217, "Input"],
+Cell[156161, 3568, 3682, 88, 217, "Input"],
+Cell[159846, 3658, 5880, 130, 217, "Input"],
+Cell[165729, 3790, 115, 3, 55, "Input"],
+Cell[165847, 3795, 386, 8, 129, "Input"],
+Cell[166236, 3805, 369, 8, 129, "Input"],
+Cell[166608, 3815, 49, 1, 30, "Input"],
+Cell[166660, 3818, 246, 5, 46, "Input"],
+Cell[166909, 3825, 86, 1, 30, "Input"],
+Cell[166998, 3828, 129, 2, 46, "Input"],
+Cell[167130, 3832, 183, 3, 30, "Input"],
+Cell[167316, 3837, 132, 2, 50, "Input"],
+Cell[167451, 3841, 330, 7, 107, "Input"],
+Cell[167784, 3850, 328, 7, 107, "Input"],
+Cell[168115, 3859, 266, 4, 30, "Input"],
+Cell[168384, 3865, 137, 2, 30, "Input"],
+Cell[168524, 3869, 310, 7, 107, "Input"],
+Cell[168837, 3878, 308, 7, 107, "Input"],
+Cell[169148, 3887, 86, 1, 30, "Input"],
+Cell[169237, 3890, 117, 2, 46, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
