@@ -4,6 +4,8 @@
 
 This repository introduces a powerful extension of the classical SABR model to a **bi-dimensional stochastic volatility framework**, tailored to accurately price **spread options**. By accounting for both asset-specific volatilities and cross-correlations—including stochastic co-movements—this model provides **a closed-form approximation** of the spread option price, along with a practical calibration strategy.
 
+Presentation : [pres_SABR&BiSABR](./pdf/pres_SABR&BiSABR.pdf)
+
 ## 📈 Key Features
 
 - ✅ **Closed-form formula** for implied normal volatility in spread options.
